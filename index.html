@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escudo Seguros</title>
+    <link rel="stylesheet" href="scss/custom.css">
+    <link rel="shortcut icon" href="public/icon/escudo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF4000;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="public/img/escudo-blan.png" alt="escudo-blan" style="height: 80px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="pages/Cotizar.html ">Cotizar</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="pages/siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
+                            <ul class="dropdown-menu border-0 shadow-lg">
+                                <li><a class="dropdown-item py-2"  href="pages/siniestros.html">Denunciar Siniestros</a></li>
+                                <li><a class="dropdown-item py-2" href="pages/Edo.Siniestro.html">Estado del Siniestro</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item py-2" href="pages/Aux24_7.html">Auxilio Mecánico 24/7</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pages/PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="pages/Contactanos.html">Contactanos</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-light d-flex align-items-center gap-2 px-3 py-2 rounded-pill" type="button">
+                        <img src="public/icon/Per ingresar.svg" alt="Icono ingresar">
+                        <a href="pages/ingresar.html" class="text-decoration-none text-black"><span>Ingresar</span></a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+    <!-- CARRUSEL DE SEGUROS-->
+        <aside>
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="public/img/segurohogar.png" class=" w-100 " style="height: 400px; object-fit: cover;" alt="segurohogar">
+                    <div class="carousel-caption d-none d-md-block ">
+                    <h1 class="blur-text">Seguros para el Hogar</h1>
+                    <h5 class="blur-text">Protege tu casa, independientemente si sos propietario o inquilino, y ¡ahorra tiempo y dinero!</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="public/img/seguro-autos 1.png" class=" w-100 " style="height: 400px; object-fit: cover;"  alt="seguro-autos">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h1 class="blur-text">Seguros para tu Auto</h1>
+                    <h5 class="blur-text">Viaja seguro, viaja tranquilo. Un seguro de auto que te acompaña en cada kilómetro.</h5>
+                </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="public/img/accidentepersonal.png" class=" w-100 " style="height: 400px; object-fit: cover;" alt="accidentepersonal">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h1 class="blur-text">Seguros para Accidentes Personales</h1>
+                    <h5 class="blur-text">La vida es impredecible, pero tu seguridad no tiene que serlo. Protege lo más valioso: tú.</h5>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </aside>
+
+<!-- NUESTROS SEGUROS -->
+
+<section class="py-5">
+    <div class="text-center">
+        <h1 class="tex">Nuestros Seguros</h1>
+        <p class="fs-4">Descubrí las coberturas y servicios que tenemos para vos</p>
+    </div>
+    <div class="d-flex justify-content-center py-4 flex-wrap">
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/auto.svg" alt="">
+            <span class="mt-3">AUTOS</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/casa.svg" alt="">
+            <span class="mt-3">HOGAR</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/corazon.svg" alt="">
+            <span class="mt-3">SALUD</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/vida.svg" alt="">
+            <span class="mt-3">VIDA</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="./public/icon/Vector.svg" alt="">
+            <span class="mt-3">ACCIDENTES PERSONALES</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/moto.svg" alt="">
+            <span class="mt-3">MOTO</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/tecnologia.svg" alt="">
+            <span class="mt-3">TECNOLOGIA</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/embarcaciones.svg" alt="">
+            <span class="mt-3">EMBARCACIONES</span>
+        </div>
+        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
+            <img src="public/icon/movilidad.svg" alt="">
+            <span class="mt-3">MOVILIDAD</span>
+        </div>
+        </div>
+</section>
+
+<!-- CONTACTANOS -->
+
+<section class="d-flex align-items-center justify-content-center text-center mt-5 py-5 sc">
+    <div class="container">
+        <div class="row bg-white rounded-3 p-4">
+            <div class="col-md-8 d-flex flex-column justify-content-center text-start">
+                <h1 class="mb-3 h2c">¿Necesitas ayuda? Contáctanos</h1>
+                <p class="mb-4">Si tenés otras consultas, contactate con nosotros y un asesor responderá tus dudas.</p>
+                <button class="whatsapp-btn sc rounded-pill" style="width: 160px;">
+                    <a href="pages/Contactanos.html" class="text-decoration-none text-white"><span>Consúltanos</span></a>
+                </button>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <img class="img-fluid" src="public/img/servicioalclientedigital.png" alt="Servicio al cliente digital" style="height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POR QUE ELEGIRNOS -->
+
+<section>
+    <div class="container mt-5">
+        <!-- Tarjeta 1 -->
+        <div class="custom-card d-flex">
+            <img src="public/icon/family-connection.svg" alt="Amplia red de Productores Asesores">
+            <div>
+                <h2>Amplia red de Productores Asesores</h2>
+                <p class="fs-5">Contamos con una gran red de productores que incluye agentes independientes, corredores corporativos, plataformas digitales y alianzas estratégicas. Esta red permite a la empresa ofrecer seguros personalizados y de fácil acceso.
+                    Tambien nos da la posibilidad de  ofrecer una buena cobertura, atención personalizada y soluciones innovadoras, garantizando una experiencia de cliente eficiente y adaptada a tus necesidades.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="custom-card d-flex">
+            <img src="public/icon/contratacion simple.svg" alt="Icono de Contratación">
+            <div>
+                <h2>Contratación Simple</h2>
+                <p class="fs-5">Escudo Seguros ofrece un proceso de contratación simple para seguros básicos como automóvil, salud y vida. Los clientes pueden elegir el seguro deseado a través de web, obtener una cotización instantánea, completar un formulario sencillo y firmar el contrato electrónicamente.<br>
+                    <br>
+                    Este proceso es rápido, accesible, sin papeleo, con pagos flexibles y transparente, lo que permite a los clientes obtener cobertura en minutos de manera fácil y sin complicaciones.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="custom-card d-flex">
+            <img src="public/icon/presenciaFederal.svg" alt="Icono de Presencia">
+            <div>
+                <h2 >Presencia Federal</h2>
+                <p class="fs-5">Ofrecemos productos y servicios adaptados a tus necesidades regionales, asegurando el cumplimiento de normativas en cuanto a solvencia, transparencia y protección al consumidor. <br>
+                    <br>
+                    Además, contamos con agentes y corredores autorizados a nivel nacional, nuestra plataforma digital nos permite gestionar tus pólizas y reclamaciones en cualquier parte del país, garantizando un servicio coherente y legalmente seguro.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHATSAPP -->
+
+<section>
+    <div class="container my-5">
+        <div class="whatsapp-card">
+            <!-- Información -->
+            <div class="whatsapp-info">
+                <h4>En WhatsApp estamos las 24h <img src="public/icon/ws contac.svg" alt="WhatsApp" style="width: 25px;"></h4>
+                <h5 >Charla con nuestro asistente virtual sobre:</h5>
+                <ul>
+                    <li>Contratar un seguro</li>
+                    <li>Consultar sobre pagos</li>
+                    <li>Consultar sobre un siniestro</li>
+                </ul>
+                <button class="whatsapp-btn">
+                    <a href="https://web.whatsapp.com/" class="text-decoration-none text-white"><span>Chatear</span></a>
+                </button>
+            </div>
+
+            <!-- Imagen -->
+            <div class="whatsapp-image">
+                <img class="img-fluid" style="height: auto;" src="public/img/whatsapp-2 1.png" alt="WhatsApp Chat">
+</section>
+
+</main>
+
+<!-- footer -->
+
+<footer class=" text-center py-5 mt-5" style="background-color: #FF4000;">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="public/img/escudoblack.png" alt="escudonegro" class="mb-3">
+                <div class="d-flex justify-content-center gap-3">
+                    <img src="public/icon/x.svg" alt="x" class="cursor-pointer">
+                    <img src="public/icon/ig.svg" alt="Instagram" class="cursor-pointer">
+                    <img src="public/icon/fb.svg" alt="Facebook" class="cursor-pointer">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav class="d-flex justify-content-around">
+                    <ul class="list-unstyled text-start">
+                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Politica de Privacidad</a></li>
+                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Datos Personales</a></li>
+                    </ul>
+                    <ul class="list-unstyled text-start">
+                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Canal de Denuncias</a></li>
+                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Defensa al Consumidor</a></li>
+                    </ul>
+                    <ul class="list-unstyled text-start">
+                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Accesibilidad</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
