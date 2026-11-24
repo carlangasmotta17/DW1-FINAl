@@ -3,266 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escudo Seguros</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <!-- Google Font -->
+    <title>Autogestión | Escudo Seguros</title>
+    <link rel="shortcut icon" href="../public/icon/escudo.ico" type="image/x-icon">
+    <!-- Google Font: Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-    <!-- Archivo CSS personalizado -->
+    <!-- Bootstrap compilado + Estilos propios -->
     <link rel="stylesheet" href="../scss/custom.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../style/styleDeIngresar.css">
-    <link rel="shortcut icon" href="../public/icon/escudo.ico" type="image/x-icon">
 </head>
-
-<body class="fondo2">
-    <!-- navbar -->
+<body class="fondo2 d-flex flex-column min-vh-100">
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF4000;">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-escudo">
+            <div class="container-fluid px-lg-4">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../public/img/escudo-blan.png" alt="escudo-blan" style="height: 80px;">
+                    <img src="../public/img/escudo-blan.png" alt="Escudo Seguros">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Cotizar.html ">Cotizar</a>
+                            <a class="nav-link" href="Cotizar.html">Cotizar</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
+                            <a class="nav-link dropdown-toggle" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
                             <ul class="dropdown-menu border-0 shadow-lg">
-                                <li><a class="dropdown-item py-2"  href="siniestros.html">Denunciar Siniestros</a></li>
+                                <li><a class="dropdown-item py-2" href="siniestros.html">Denunciar Siniestros</a></li>
                                 <li><a class="dropdown-item py-2" href="Edo.Siniestro.html">Estado del Siniestro</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item py-2" href="Aux24_7.html">Auxilio Mecánico 24/7</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Contactanos.html">Contactanos</a>
+                            <a class="nav-link" href="Contactanos.html">Contactanos</a>
                         </li>
                     </ul>
-                    <button class="btn btn-light d-flex align-items-center gap-2 px-3 py-2 rounded-pill" type="button">
-                        <img src="../public/icon/Per ingresar.svg" alt="Icono ingresar">
-                        <a href="ingresar.html" class="text-decoration-none text-black"><span>Ingresar</span></a>
-                    </button>
+                    <a href="ingresar.html" class="btn btn-light text-dark d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill fw-semibold" aria-current="page">
+                        <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secondary" aria-hidden="true">
+                            <path d="M11.0449 0C12.4633 0 13.8237 0.526784 14.8267 1.46447C15.8297 2.40215 16.3932 3.67392 16.3932 5C16.3932 6.32608 15.8297 7.59785 14.8267 8.53553C13.8237 9.47322 12.4633 10 11.0449 10C9.62638 10 8.26601 9.47322 7.263 8.53553C6.25998 7.59785 5.6965 6.32608 5.6965 5C5.6965 3.67392 6.25998 2.40215 7.263 1.46447C8.26601 0.526784 9.62638 0 11.0449 0ZM11.0449 12.5C16.9548 12.5 21.7416 14.7375 21.7416 17.5V20H0.348145V17.5C0.348145 14.7375 5.13492 12.5 11.0449 12.5Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ingresar</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-
-<main class="">
-    <div class="container py-5">
-        <!-- Título y subtítulo -->
-        <div class="textoPrincipal">
-            <h1 class="title">Autogestión</h1>
-            <h4 class="text-muted">Te damos la bienvenida a nuestro sitio de Autogestión.</h4>
-            <p class="subtitle" style="padding-top: 30px;">¿En qué te podemos ayudar?</p>
-        </div>
-
-        <!-- Sección principal -->
-        <div class="row">
-            <!-- Opciones -->
-            <div id = "seccion1"  class="col-md-8">
-                <div class="row g-3">
-                    <div class="col-6">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                            Cómo Iniciar Sesión
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cómo Iniciar Sesión</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Si ya estás registrado inicia sesión con la cuenta que hayas seleccionado previamente (Facebook, Outlook, Apple, Google) o colocando tu usuario y contraseña en Ingresar.</p>
-                                    <p>En caso que no la recuerdes podés Recuperarla.</p>
-                                    <p>Si no estás registrado ingresá a Crear una cuenta.</p>
-                                    <p>Para más información, mirá el video del paso a paso.</p>
-                                    <p>Contactate con nosotros si necesitas más ayuda. Llamanos al 0800 666 8400</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                            Cómo Crear Cuenta
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Cómo Crear Cuenta</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Si ya tenés una cuenta en Mi salud online, Mi credencial digital de Prevención salud, Autogestión o Escudo Seguros Beneficia, podés ingresar directamente con ella.</p>
-                                    <p>En caso que no te hayas registrado ingresá a Crear una cuenta</p>
-                                    <p>Podés utilizar tu correo electrónico y una contraseña que elijas o registrarte con una de tus cuentas de Facebook, Outlook, Apple o Google.</p>
-                                    <p>Para más información, mirá el video del paso a paso.</p>
-                                    <p>Contactate con nosotros si necesitas más ayuda. Llamanos al 0800 666 8400</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>                       
-                    </div>
-
-                    <div class="col-6">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-                            Olvidé mi Usuario
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Olvidé mi Usuario</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Para recuperar tu cuenta vamos a necesitar validar tu identidad.</p>
-                                    <p>Ingresá a Recuperar cuenta para iniciar el proceso.</p>
-                                    <p>En caso de que quieras cambiar la aplicación o el correo con el que iniciás sesión te recordamos que podés realizarlo desde el mismo link.</p>
-                                    <p>Para más información, mirá el video del paso a paso.</p>
-                                    <p>Contactate con nosotros si necesitas más ayuda. Llamanos al 0800 666 8400</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>                     
-                    </div>
-                    <div class="col-6">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                            Olvidé mi Contraseña
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Olvidé mi Contraseña</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Si utilizaste Facebook, Outlook, Apple o Google, tenés que recuperar tu contraseña desde la aplicación con la que te registraste.</p>
-                                    <p>Seleccioná olvidé mi contraseña y colocá el correo electrónico con el que te registraste. Te enviaremos el acceso para cambiarla.</p>
-                                    <p>Para más información, mirá el video del paso a paso.</p>
-                                    <p>Contactate con nosotros si necesitas más ayuda. Llamanos al 0800 666 8400</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>                     
-                    </div>
-                </div>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <!-- Título y subtítulo -->
+            <div class="mb-4">
+                <h1 class="title mb-2">Autogestión</h1>
+                <h2 class="h5 text-muted mb-4">Te damos la bienvenida a nuestro sitio de Autogestión.</h2>
+                <p class="subtitle mb-0">¿En qué te podemos ayudar?</p>
             </div>
 
-<!-- Información adicional -->
-            <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <p>Si ya utilizás Autogestión podés ingresar utilizando el mismo usuario y contraseña o red social que elegiste la primera vez</p>
-                        <button class="btn btn-primary-custom mb-3" data-bs-toggle="modal" data-bs-target="#modalIngresar">INGRESAR</button>
-                        <p>Si nunca usaste Autogestión, para poder ingresar debés crear una cuenta</p>
-                        <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#modalCrearCuenta">CREAR CUENTA</button>
+            <!-- Sección principal -->
+            <div class="row g-4 align-items-start">
+                <!-- Opciones de ayuda -->
+                <div class="col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <button type="button" class="btn btn-option w-100" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                Cómo Iniciar Sesión
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <button type="button" class="btn btn-option w-100" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                Cómo Crear Cuenta
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <button type="button" class="btn btn-option w-100" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                Olvidé mi Usuario
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <button type="button" class="btn btn-option w-100" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                Olvidé mi Contraseña
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Ingresar / Crear Cuenta -->
+                <div class="col-lg-4">
+                    <div class="card card-autogestion shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <p class="mb-3">Si ya utilizás Autogestión podés ingresar utilizando el mismo usuario y contraseña o red social que elegiste la primera vez.</p>
+                            <button type="button" class="btn btn-primary-custom mb-4" data-bs-toggle="modal" data-bs-target="#modalIngresar">INGRESAR</button>
+                            <p class="mb-3">Si nunca usaste Autogestión, para poder ingresar debés crear una cuenta.</p>
+                            <button type="button" class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#modalCrearCuenta">CREAR CUENTA</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Ingresar -->
-    <div class="modal fade" id="modalIngresar" tabindex="-1" aria-labelledby="modalIngresarLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title border" id="modalIngresarLabel">Ingresar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="correoIngresar" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="correoIngresar" placeholder="Ingresa tu correo">
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordIngresar" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="passwordIngresar" placeholder="Ingresa tu contraseña">
-                        </div>
-                        <button type="submit" class="btn btn-primary-custom w-100 border">Ingresar</button>
-                    </form>
+        <!-- Modal Cómo Iniciar Sesión -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel1">Cómo Iniciar Sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Si ya estás registrado iniciá sesión con la cuenta que hayas seleccionado previamente (Facebook, Outlook, Apple, Google) o colocando tu usuario y contraseña en Ingresar.</p>
+                        <p>En caso de que no la recuerdes podés recuperarla.</p>
+                        <p>Si no estás registrado ingresá a Crear una cuenta.</p>
+                        <p class="mb-0">Contactate con nosotros si necesitás más ayuda. Llamanos al 0800 666 8400.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Crear Cuenta -->
-    <div class="modal fade" id="modalCrearCuenta" tabindex="-1" aria-labelledby="modalCrearCuentaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCrearCuentaLabel">Crear Cuenta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="usuarioCrear" class="form-label">Usuario</label>
-                            <input type="user" class="form-control" id="usuarioCrear" placeholder="Ingresa tu nombre de usuario">
-                        </div>
-                        <div class="mb-3">
-                            <label for="correoCrear" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="correoCrear" placeholder="Ingresa tu correo">
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordCrear" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="passwordCrear" placeholder="Crea una contraseña">
-                        </div>
-                        <div class="mb-3">
-                            <label for="fechaNacimientoCrear" class="form-label">Fecha de Nacimiento</label>
-                            <input type="date" class="form-control" id="fechaNacimientoCrear" placeholder="Ingresa tu fecha de Nacimiento 0/00/0000">
-                        </div>
-                        <button type="submit" class="btn btn-primary-custom w-100">Crear Cuenta</button>
-                    </form>
+        <!-- Modal Cómo Crear Cuenta -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel2">Cómo Crear Cuenta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Si ya tenés una cuenta en Mi salud online, Mi credencial digital de Prevención salud, Autogestión o Escudo Seguros Beneficia, podés ingresar directamente con ella.</p>
+                        <p>En caso de que no te hayas registrado ingresá a Crear una cuenta.</p>
+                        <p>Podés utilizar tu correo electrónico y una contraseña que elijas o registrarte con una de tus cuentas de Facebook, Outlook, Apple o Google.</p>
+                        <p class="mb-0">Contactate con nosotros si necesitás más ayuda. Llamanos al 0800 666 8400.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-        </div>
-    </div>
-</main>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Modal Olvidé mi Usuario -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel3">Olvidé mi Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Para recuperar tu cuenta vamos a necesitar validar tu identidad.</p>
+                        <p>Ingresá a Recuperar cuenta para iniciar el proceso.</p>
+                        <p>En caso de que quieras cambiar la aplicación o el correo con el que iniciás sesión te recordamos que podés realizarlo desde el mismo enlace.</p>
+                        <p class="mb-0">Contactate con nosotros si necesitás más ayuda. Llamanos al 0800 666 8400.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Olvidé mi Contraseña -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel4">Olvidé mi Contraseña</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Si utilizaste Facebook, Outlook, Apple o Google, tenés que recuperar tu contraseña desde la aplicación con la que te registraste.</p>
+                        <p>Seleccioná olvidé mi contraseña y colocá el correo electrónico con el que te registraste. Te enviaremos el acceso para cambiarla.</p>
+                        <p class="mb-0">Contactate con nosotros si necesitás más ayuda. Llamanos al 0800 666 8400.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Ingresar -->
+        <div class="modal fade" id="modalIngresar" tabindex="-1" aria-labelledby="modalIngresarLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="modalIngresarLabel">Ingresar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="event.preventDefault();">
+                            <div class="mb-3">
+                                <label for="correoIngresar" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correoIngresar" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordIngresar" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="passwordIngresar" placeholder="Ingresa tu contraseña" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">Ingresar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Crear Cuenta -->
+        <div class="modal fade" id="modalCrearCuenta" tabindex="-1" aria-labelledby="modalCrearCuentaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="modalCrearCuentaLabel">Crear Cuenta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="event.preventDefault();">
+                            <div class="mb-3">
+                                <label for="usuarioCrear" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="usuarioCrear" placeholder="Ingresa tu nombre de usuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correoCrear" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correoCrear" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordCrear" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="passwordCrear" placeholder="Creá una contraseña" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaNacimientoCrear" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimientoCrear" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">Crear Cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-escudo text-center py-5 mt-auto">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-4">
+                    <img src="../public/img/escudoblack.png" alt="Escudo Seguros" class="mb-3">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="X">
+                            <svg width="26" height="24" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M0 0.988281H4.16667L29.1667 34.1914H25L0 0.988281ZM7.5 0.988281H11.6667L36.6667 34.1914H32.5L7.5 0.988281Z" fill="currentColor"/>
+                                <path d="M3.3335 0.988281H11.6668V4.30859H3.3335V0.988281ZM25.0002 34.1914H33.3335V30.8711H25.0002V34.1914Z" fill="currentColor"/>
+                                <path d="M25.7115 0.988281H30.8335L5.95545 34.1914H0.833496L25.7115 0.988281Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Instagram">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M11.6 0H28.4C34.8 0 40 5.2 40 11.6V28.4C40 31.4765 38.7779 34.427 36.6024 36.6024C34.427 38.7779 31.4765 40 28.4 40H11.6C5.2 40 0 34.8 0 28.4V11.6C0 8.52349 1.22214 5.57298 3.39756 3.39756C5.57298 1.22214 8.52349 0 11.6 0ZM11.2 4C9.29044 4 7.45909 4.75857 6.10883 6.10883C4.75857 7.45909 4 9.29044 4 11.2V28.8C4 32.78 7.22 36 11.2 36H28.8C30.7096 36 32.5409 35.2414 33.8912 33.8912C35.2414 32.5409 36 30.7096 36 28.8V11.2C36 7.22 32.78 4 28.8 4H11.2ZM30.5 7C31.163 7 31.7989 7.26339 32.2678 7.73223C32.7366 8.20107 33 8.83696 33 9.5C33 10.163 32.7366 10.7989 32.2678 11.2678C31.7989 11.7366 31.163 12 30.5 12C29.837 12 29.2011 11.7366 28.7322 11.2678C28.2634 10.7989 28 10.163 28 9.5C28 8.83696 28.2634 8.20107 28.7322 7.73223C29.2011 7.26339 29.837 7 30.5 7ZM20 10C22.6522 10 25.1957 11.0536 27.0711 12.9289C28.9464 14.8043 30 17.3478 30 20C30 22.6522 28.9464 25.1957 27.0711 27.0711C25.1957 28.9464 22.6522 30 20 30C17.3478 30 14.8043 28.9464 12.9289 27.0711C11.0536 25.1957 10 22.6522 10 20C10 17.3478 11.0536 14.8043 12.9289 12.9289C14.8043 11.0536 17.3478 10 20 10ZM20 14C18.4087 14 16.8826 14.6321 15.7574 15.7574C14.6321 16.8826 14 18.4087 14 20C14 21.5913 14.6321 23.1174 15.7574 24.2426C16.8826 25.3679 18.4087 26 20 26C21.5913 26 23.1174 25.3679 24.2426 24.2426C25.3679 23.1174 26 21.5913 26 20C26 18.4087 25.3679 16.8826 24.2426 15.7574C23.1174 14.6321 21.5913 14 20 14Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Facebook">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M40 19.9718C40 8.94737 31.04 0 20 0C8.96 0 0 8.94737 0 19.9718C0 29.6382 6.88 37.6868 16 39.5442V25.9633H12V19.9718H16V14.9789C16 11.1243 19.14 7.98872 23 7.98872H28V13.9803H24C22.9 13.9803 22 14.879 22 15.9774V19.9718H28V25.9633H22V39.8438C32.1 38.8452 40 30.3372 40 19.9718Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="row text-start gy-2" aria-label="Enlaces legales">
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="PreguntasFrecuentes.html">Política de Privacidad</a></li>
+                            <li class="mb-0"><a href="PreguntasFrecuentes.html">Datos Personales</a></li>
+                        </ul>
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="siniestros.html">Canal de Denuncias</a></li>
+                            <li class="mb-0"><a href="Contactanos.html">Defensa al Consumidor</a></li>
+                        </ul>
+                        <ul class="col-12 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-0"><a href="Contactanos.html">Accesibilidad</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

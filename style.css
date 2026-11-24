@@ -1,127 +1,303 @@
-.nav {
-    background: #FF4000;
-    height: 140px ;
+:root {
+    --escudo-primary: #FF4000;
+    --escudo-primary-hover: #E03800;
+    --escudo-accent: #F75E25;
+    --escudo-salmon: #F08259;
+    --escudo-soft-bg: #F6ECEC;
+    --escudo-soft-orange: #FFF5F0;
+    --escudo-gray-bg: #E9E9E9;
+    --escudo-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --escudo-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.lin{
-    color: white;
+body {
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
 }
 
-.tex{
-    color: #FF4000;
+/* Utilidades de marca */
+.lin {
+    color: #ffffff;
 }
 
-.h2c{
-    color: #F75E25;
+.tex,
+.text-escudo {
+    color: var(--escudo-primary) !important;
 }
 
-.sc{
-    background-color: #FF4000;
+.h2c {
+    color: var(--escudo-accent);
+}
+
+.sc,
+.bg-escudo {
+    background-color: var(--escudo-primary) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Botón principal estilo píldora (Guía de estilos Figma) */
+.btn-escudo {
+    background-color: var(--escudo-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 50rem;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-escudo:hover,
+.btn-escudo:focus-visible {
+    background-color: var(--escudo-primary-hover);
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar-escudo {
+    background-color: var(--escudo-primary);
+}
+
+.navbar-escudo .navbar-brand img {
+    height: 64px;
+    width: auto;
+}
+
+@media (max-width: 575.98px) {
+    .navbar-escudo .navbar-brand img {
+        height: 52px;
+    }
+}
+
+.navbar-escudo .nav-link {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 500;
+    transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.navbar-escudo .nav-link:hover,
+.navbar-escudo .nav-link.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        animation: fadeIn 0.2s ease-in-out;
+    }
+}
+
+/* Hero Carousel */
+.hero-carousel .carousel-item {
+    position: relative;
+}
+
+.hero-carousel .hero-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .hero-carousel .hero-img {
+        height: 280px;
+    }
+}
+
+.hero-carousel .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 0.05) 100%);
+    pointer-events: none;
+}
+
+.hero-carousel .carousel-caption {
+    z-index: 2;
+    left: 8%;
+    right: 8%;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.hero-control-btn {
+    width: 42px;
+    height: 42px;
+    background-color: var(--escudo-primary);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 0.95;
+}
+
+.carousel-control-prev:hover .hero-control-btn,
+.carousel-control-next:hover .hero-control-btn {
+    background-color: var(--escudo-primary-hover);
+    transform: scale(1.06);
 }
 
 /* Estilo del título con difuminado */
 .blur-text {
-    
-    font-weight: bold;
-    color: #ffffff; /* Color base */
-    text-shadow: 0 0 5px rgba(232, 98, 36, 0.6), /* Difuminado ligero */
-                 0 0 10px rgba(232, 98, 36, 0.4), /* Difuminado medio */
-                 0 0 15px rgba(232, 98, 36, 0.2); /* Difuminado suave */
-    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45),
+                 0 0 12px rgba(232, 98, 36, 0.45);
 }
 
-.custom-card {
-    background-color: #F08259;
-    color: white;
+/* Tarjetas de Servicios (Nuestros Seguros) */
+.service-card {
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 20px;
-    margin: 60px 0;
-    display: flex;
-    align-items: center;
+    box-shadow: var(--escudo-shadow);
+    min-height: 150px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.custom-card img {
-    width: 100px;
-    margin-right: 20px;
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
 }
-.custom-card h2 {
-    margin-bottom: 10px;
+
+.service-card .service-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #212529;
+    line-height: 1.25;
 }
+
+/* Tarjetas Por qué Elegirnos */
+.custom-card {
+    background-color: var(--escudo-salmon);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.custom-card h3 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
 .custom-card p {
     margin: 0;
 }
-.custom-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+/* Tarjeta WhatsApp */
+.whatsapp-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: var(--escudo-shadow);
+    overflow: hidden;
 }
 
-.whatsapp-card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.whatsapp-info {
-    flex: 1;
-}
 .whatsapp-info h4 {
-    color: #f47c47;
-    font-weight: bold;
+    color: var(--escudo-accent);
+    font-weight: 700;
 }
-.whatsapp-info p {
-    margin-bottom: 10px;
-}
+
 .whatsapp-info ul {
-    padding-left: 20px;
-    margin-bottom: 15px;
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
 }
+
 .whatsapp-info ul li {
     list-style-type: circle;
-    margin-bottom: 5px;
+    margin-bottom: 0.35rem;
 }
+
 .whatsapp-btn {
-    background-color: #FF4000;
-    color: white;
+    background-color: var(--escudo-primary);
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
 }
+
 .whatsapp-btn:hover {
-    background-color: #e0693c;
-}
-.whatsapp-image img {
-    width: 100%;
-    border-radius: 15px;
+    background-color: var(--escudo-primary-hover);
+    color: #ffffff;
 }
 
-.footer{
-    color: white;
-    text-align: center;
-    width: 100%;
-    height: 175px;
-    margin-top: 20px;
-}
-
-.ulclass{
-    color: white;
-}
-
+/* Preguntas Frecuentes */
 .faq-section {
-    background-color: #F6ECEC;
-    border-radius: 10px; 
-    padding: 20px; 
+    background-color: var(--escudo-soft-bg);
+    border-radius: 12px;
+    padding: 1.75rem;
 }
 
 .faq-title {
-    color: #f05922; 
-    font-weight: bold;
+    color: var(--escudo-primary);
+    font-weight: 700;
 }
-@media (min-width: 992px) {                                                                                   
-    .nav-item.dropdown:hover .dropdown-menu {                                                                 
-        display: block;                                                                                       
-        margin-top: 0;                                                                                        
-        animation: fadeIn 0.2s ease-in-out;                                                                   
-    }                                                                                                         
+
+.accordion-escudo .accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.accordion-escudo .accordion-button {
+    font-weight: 600;
+    color: #212529;
+}
+
+.accordion-escudo .accordion-button:not(.collapsed) {
+    background-color: var(--escudo-soft-orange);
+    color: var(--escudo-primary);
+    box-shadow: none;
+}
+
+.accordion-escudo .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 64, 0, 0.2);
+}
+
+/* Footer principal */
+.footer-escudo {
+    background-color: var(--escudo-primary);
+    color: #ffffff;
+}
+
+.footer-escudo a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+.footer-escudo a:hover {
+    opacity: 0.85;
+    text-decoration: underline;
 }

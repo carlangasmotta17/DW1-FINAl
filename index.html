@@ -4,261 +4,366 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escudo Seguros</title>
-    <link rel="stylesheet" href="scss/custom.css">
     <link rel="shortcut icon" href="public/icon/escudo.ico" type="image/x-icon">
+    <!-- Google Font: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap compilado + Estilos propios -->
+    <link rel="stylesheet" href="scss/custom.css">
     <link rel="stylesheet" href="style.css">
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF4000;">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-escudo">
+            <div class="container-fluid px-lg-4">
                 <a class="navbar-brand" href="index.html">
-                    <img src="public/img/escudo-blan.png" alt="escudo-blan" style="height: 80px;">
+                    <img src="public/img/escudo-blan.png" alt="Escudo Seguros">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="pages/Cotizar.html ">Cotizar</a>
+                            <a class="nav-link" href="pages/Cotizar.html">Cotizar</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="pages/siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
+                            <a class="nav-link dropdown-toggle" href="pages/siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
                             <ul class="dropdown-menu border-0 shadow-lg">
-                                <li><a class="dropdown-item py-2"  href="pages/siniestros.html">Denunciar Siniestros</a></li>
+                                <li><a class="dropdown-item py-2" href="pages/siniestros.html">Denunciar Siniestros</a></li>
                                 <li><a class="dropdown-item py-2" href="pages/Edo.Siniestro.html">Estado del Siniestro</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item py-2" href="pages/Aux24_7.html">Auxilio Mecánico 24/7</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="pages/PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="pages/PreguntasFrecuentes.html">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="pages/Contactanos.html">Contactanos</a>
+                            <a class="nav-link" href="pages/Contactanos.html">Contactanos</a>
                         </li>
                     </ul>
-                    <button class="btn btn-light d-flex align-items-center gap-2 px-3 py-2 rounded-pill" type="button">
-                        <img src="public/icon/Per ingresar.svg" alt="Icono ingresar">
-                        <a href="pages/ingresar.html" class="text-decoration-none text-black"><span>Ingresar</span></a>
-                    </button>
+                    <a href="pages/ingresar.html" class="btn btn-light text-dark d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill fw-semibold">
+                        <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secondary" aria-hidden="true">
+                            <path d="M11.0449 0C12.4633 0 13.8237 0.526784 14.8267 1.46447C15.8297 2.40215 16.3932 3.67392 16.3932 5C16.3932 6.32608 15.8297 7.59785 14.8267 8.53553C13.8237 9.47322 12.4633 10 11.0449 10C9.62638 10 8.26601 9.47322 7.263 8.53553C6.25998 7.59785 5.6965 6.32608 5.6965 5C5.6965 3.67392 6.25998 2.40215 7.263 1.46447C8.26601 0.526784 9.62638 0 11.0449 0ZM11.0449 12.5C16.9548 12.5 21.7416 14.7375 21.7416 17.5V20H0.348145V17.5C0.348145 14.7375 5.13492 12.5 11.0449 12.5Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ingresar</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        
-    <!-- CARRUSEL DE SEGUROS-->
-        <aside>
-            <div id="carouselExampleCaptions" class="carousel slide">
+        <!-- Carrusel de Seguros -->
+        <section aria-label="Seguros destacados">
+            <div id="carouselExampleCaptions" class="carousel slide hero-carousel" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="public/img/segurohogar.png" class=" w-100 " style="height: 400px; object-fit: cover;" alt="segurohogar">
-                    <div class="carousel-caption d-none d-md-block ">
-                    <h1 class="blur-text">Seguros para el Hogar</h1>
-                    <h5 class="blur-text">Protege tu casa, independientemente si sos propietario o inquilino, y ¡ahorra tiempo y dinero!</h5>
+                    <div class="carousel-item active">
+                        <img src="public/img/segurohogar.png" class="d-block w-100 hero-img" alt="Seguros para el Hogar">
+                        <div class="carousel-caption">
+                            <h1 class="blur-text fs-2 fs-md-1 mb-2">Seguros para el Hogar</h1>
+                            <p class="blur-text fs-6 fs-md-5 mb-0">Protegé tu casa, independientemente si sos propietario o inquilino, y ¡ahorrá tiempo y dinero!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/img/seguro-autos 1.png" class="d-block w-100 hero-img" alt="Seguros para tu Auto">
+                        <div class="carousel-caption">
+                            <h2 class="blur-text fs-2 fs-md-1 mb-2">Seguros para tu Auto</h2>
+                            <p class="blur-text fs-6 fs-md-5 mb-0">Viajá seguro, viajá tranquilo. Un seguro de auto que te acompaña en cada kilómetro.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/img/accidentepersonal.png" class="d-block w-100 hero-img" alt="Seguros para Accidentes Personales">
+                        <div class="carousel-caption">
+                            <h2 class="blur-text fs-2 fs-md-1 mb-2">Seguros para Accidentes Personales</h2>
+                            <p class="blur-text fs-6 fs-md-5 mb-0">La vida es impredecible, pero tu seguridad no tiene que serlo. Protegé lo más valioso: vos.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="public/img/seguro-autos 1.png" class=" w-100 " style="height: 400px; object-fit: cover;"  alt="seguro-autos">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h1 class="blur-text">Seguros para tu Auto</h1>
-                    <h5 class="blur-text">Viaja seguro, viaja tranquilo. Un seguro de auto que te acompaña en cada kilómetro.</h5>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="Anterior">
+                    <span class="hero-control-btn text-white" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16M9 17s-5-3.682-5-5s5-5 5-5"/>
+                        </svg>
+                    </span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" aria-label="Siguiente">
+                    <span class="hero-control-btn text-white" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4m11 5s5-3.682 5-5s-5-5-5-5"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Nuestros Seguros -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="tex fw-bold display-6">Nuestros Seguros</h2>
+                    <p class="fs-5 text-muted">Descubrí las coberturas y servicios que tenemos para vos</p>
                 </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="public/img/accidentepersonal.png" class=" w-100 " style="height: 400px; object-fit: cover;" alt="accidentepersonal">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h1 class="blur-text">Seguros para Accidentes Personales</h1>
-                    <h5 class="blur-text">La vida es impredecible, pero tu seguridad no tiene que serlo. Protege lo más valioso: tú.</h5>
+
+                <div class="row g-3 g-md-4 justify-content-center">
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M37.544 13.68L34.808 4.55778C34.4111 3.22996 33.6477 2.07489 32.6262 1.25668C31.6048 0.43848 30.3772 -0.00124046 29.118 2.62839e-06H10.882C9.62278 -0.00124046 8.39523 0.43848 7.37377 1.25668C6.35231 2.07489 5.5889 3.22996 5.192 4.55778L2.456 13.68C1.72876 14.0181 1.10765 14.5875 0.670688 15.3165C0.233725 16.0456 0.000393249 16.9018 0 17.7778V28.8889C0 30.5622 0.846 32.0044 2.078 32.7622C2.052 32.9089 2 33.0422 2 33.1956V37.7778C2 38.3671 2.21071 38.9324 2.58579 39.3491C2.96086 39.7659 3.46957 40 4 40H6C6.53043 40 7.03914 39.7659 7.41421 39.3491C7.78929 38.9324 8 38.3671 8 37.7778V33.3333H32V37.7778C32 38.3671 32.2107 38.9324 32.5858 39.3491C32.9609 39.7659 33.4696 40 34 40H36C36.5304 40 37.0391 39.7659 37.4142 39.3491C37.7893 38.9324 38 38.3671 38 37.7778V33.1956C38 33.0422 37.948 32.9067 37.922 32.7622C38.5492 32.3831 39.0731 31.8234 39.4387 31.142C39.8043 30.4605 39.9982 29.6823 40 28.8889V17.7778C40 15.9356 38.984 14.3533 37.544 13.68ZM4 28.8889V17.7778H36L36.004 28.8889H4ZM10.882 4.44445H29.116C29.978 4.44445 30.742 5.05334 31.014 5.96445L33.226 13.3333H6.774L8.984 5.96445C9.1167 5.52177 9.37143 5.13673 9.7121 4.86391C10.0528 4.59109 10.4621 4.44433 10.882 4.44445Z" fill="currentColor"/>
+                                <path d="M9 26.6667C10.6569 26.6667 12 25.1743 12 23.3333C12 21.4924 10.6569 20 9 20C7.34315 20 6 21.4924 6 23.3333C6 25.1743 7.34315 26.6667 9 26.6667Z" fill="currentColor"/>
+                                <path d="M31 26.6667C32.6569 26.6667 34 25.1743 34 23.3333C34 21.4924 32.6569 20 31 20C29.3431 20 28 21.4924 28 23.3333C28 25.1743 29.3431 26.6667 31 26.6667Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">AUTOS</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M38.6667 36.6563H36V22.3127L36.39 22.7789C36.6406 23.0779 36.9804 23.2457 37.3345 23.2454C37.6886 23.245 38.0281 23.0765 38.2783 22.7769C38.5285 22.4773 38.6689 22.0712 38.6686 21.6479C38.6683 21.2246 38.5273 20.8188 38.2767 20.5198L21.885 0.932847C21.385 0.335534 20.7069 0 20 0C19.2931 0 18.615 0.335534 18.115 0.932847L1.72333 20.5198C1.47337 20.8188 1.33302 21.2243 1.33318 21.6471C1.33334 22.0698 1.47398 22.4751 1.72417 22.7739C1.97435 23.0727 2.31359 23.2404 2.66726 23.2403C3.02092 23.2401 3.36003 23.072 3.61 22.7729L4 22.3127V36.6563H1.33333C0.979711 36.6563 0.640573 36.8242 0.390524 37.1231C0.140476 37.422 0 37.8273 0 38.25C0 38.6727 0.140476 39.0781 0.390524 39.377C0.640573 39.6758 0.979711 39.8438 1.33333 39.8438H38.6667C39.0203 39.8438 39.3594 39.6758 39.6095 39.377C39.8595 39.0781 40 38.6727 40 38.25C40 37.8273 39.8595 37.422 39.6095 37.1231C39.3594 36.8242 39.0203 36.6563 38.6667 36.6563ZM6.66667 19.1253L20 3.18797L33.3333 19.1253V36.6563H25.3333V25.5002C25.3333 25.0775 25.1929 24.6721 24.9428 24.3732C24.6928 24.0744 24.3536 23.9065 24 23.9065H16C15.6464 23.9065 15.3072 24.0744 15.0572 24.3732C14.8071 24.6721 14.6667 25.0775 14.6667 25.5002V36.6563H6.66667V19.1253ZM22.6667 36.6563H17.3333V27.0939H22.6667V36.6563Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">HOGAR</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M19.9931 3.2353C22.3449 1.00551 25.4079 -0.149189 28.5342 0.0154727C31.6606 0.180134 34.6049 1.65124 36.7445 4.11759C38.884 6.58393 40.0509 9.85205 39.9983 13.2306C39.9457 16.6091 38.6777 19.8331 36.4626 22.2204L26.3526 33.1368L19.9912 40L5.90214 24.7923L3.52171 22.2183C1.3133 19.8294 0.0510941 16.6077 0.0015174 13.2331C-0.0480593 9.85853 1.11887 6.59519 3.256 4.1319C5.39312 1.66862 8.33321 0.198137 11.4557 0.0308476C14.5781 -0.136441 17.6386 1.01255 19.9912 3.2353M26.3487 27.2304L33.7242 19.2662C34.4841 18.4458 35.0868 17.4719 35.4981 16.4001C35.9094 15.3282 36.121 14.1795 36.121 13.0193C36.121 11.8591 35.9094 10.7104 35.4981 9.63851C35.0868 8.56667 34.4841 7.59277 33.7242 6.77241C32.9642 5.95206 32.0621 5.30132 31.0692 4.85735C30.0764 4.41338 29.0122 4.18487 27.9376 4.18487C26.8629 4.18487 25.7988 4.41338 24.8059 4.85735C23.813 5.30132 22.9109 5.95206 22.151 6.77241L19.9912 9.10403L17.8295 6.77033C16.2948 5.11355 14.2133 4.18278 12.0429 4.18278C9.87249 4.18278 7.791 5.11355 6.2563 6.77033C4.7216 8.4271 3.85942 10.6742 3.85942 13.0172C3.85942 15.3602 4.7216 17.6073 6.2563 19.2641L8.6406 21.8381L19.9912 34.0916L26.3487 27.2284" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">SALUD</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M10 19C10 19 4.857 21 4 28M38 19C38 19 43.143 21 44 28M18 19C18 19 22.8 20.167 24 26C25.2 20.167 30 19 30 19M20 34C20 34 15.8 34.75 14 40M28 34C28 34 32.2 34.75 34 40" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M24 36C26.7614 36 29 33.7614 29 31C29 28.2386 26.7614 26 24 26C21.2386 26 19 28.2386 19 31C19 33.7614 21.2386 36 24 36Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M34 20C37.3137 20 40 17.3137 40 14C40 10.6863 37.3137 8 34 8C30.6863 8 28 10.6863 28 14C28 17.3137 30.6863 20 34 20Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 20C17.3137 20 20 17.3137 20 14C20 10.6863 17.3137 8 14 8C10.6863 8 8 10.6863 8 14C8 17.3137 10.6863 20 14 20Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="service-label mt-3">VIDA</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M16 16C13.8 16 11.9167 15.2167 10.35 13.65C8.78333 12.0833 8 10.2 8 8C8 5.8 8.78333 3.91667 10.35 2.35C11.9167 0.783333 13.8 0 16 0C18.2 0 20.0833 0.783333 21.65 2.35C23.2167 3.91667 24 5.8 24 8C24 10.2 23.2167 12.0833 21.65 13.65C20.0833 15.2167 18.2 16 16 16ZM11.5 36C11.0667 36 10.7087 35.858 10.426 35.574C10.1433 35.29 10.0013 34.932 10 34.5C9.99867 34.068 10.1407 33.71 10.426 33.426C10.7113 33.142 11.0693 33 11.5 33H15.3L13.9 36H11.5ZM0 40V26.45C0 25.3167 0.283334 24.2753 0.85 23.326C1.41667 22.3767 2.2 21.6347 3.2 21.1C5.2 20.1 7.27533 19.3333 9.426 18.8C11.5767 18.2667 13.768 18 16 18C17 18 18.0087 18.05 19.026 18.15C20.0433 18.25 21.0347 18.4167 22 18.65L17.15 29H11.5C9.96667 29 8.66667 29.5333 7.6 30.6C6.53333 31.6667 6 32.9667 6 34.5C6 36.0333 6.53333 37.3333 7.6 38.4C8.66667 39.4667 9.96667 40 11.5 40H0ZM25.9 40V19.85C26.4 20.0167 26.892 20.2087 27.376 20.426C27.86 20.6433 28.3347 20.868 28.8 21.1C29.8 21.6333 30.5833 22.3753 31.15 23.326C31.7167 24.2767 32 25.318 32 26.45V36C32 37.1 31.6087 38.042 30.826 38.826C30.0433 39.61 29.1013 40.0013 28 40H25.9Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">ACCIDENTES PERSONALES</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="42" height="36" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M14.73 14L20.4 10H27.384L25.2 4H20V0H28L30.184 6H38V12H32.368L35.28 20.004C37.4895 20.0742 39.5959 20.9552 41.1975 22.479C42.7991 24.0027 43.7839 26.0626 43.9641 28.2659C44.1443 30.4692 43.5072 32.6617 42.1745 34.4254C40.8417 36.1891 38.9064 37.4006 36.7377 37.8289C34.5689 38.2572 32.3184 37.8723 30.4152 36.7477C28.5121 35.623 27.0894 33.8372 26.4185 31.7308C25.7476 29.6245 25.8754 27.3448 26.7775 25.3266C27.6797 23.3085 29.2931 21.6929 31.31 20.788L28.838 14H26.944L23.78 25.74L17.93 27.878C17.9767 28.246 18 28.62 18 29C17.9995 30.6499 17.5455 32.2679 16.6876 33.6771C15.8297 35.0864 14.6009 36.2328 13.1355 36.9909C11.6701 37.749 10.0245 38.0897 8.3786 37.9758C6.73267 37.8619 5.14971 37.2977 3.80274 36.345C2.45577 35.3922 1.39661 34.0875 0.741025 32.5735C0.0854372 31.0595 -0.141353 29.3944 0.0854386 27.7601C0.312231 26.1259 0.983878 24.5855 2.02698 23.3072C3.07008 22.0289 4.44449 21.062 6 20.512V18H2V14H14.73ZM9 34C10.3261 34 11.5979 33.4732 12.5355 32.5355C13.4732 31.5979 14 30.3261 14 29C14 27.6739 13.4732 26.4021 12.5355 25.4645C11.5979 24.5268 10.3261 24 9 24C7.67392 24 6.40215 24.5268 5.46447 25.4645C4.52679 26.4021 4 27.6739 4 29C4 30.3261 4.52679 31.5979 5.46447 32.5355C6.40215 33.4732 7.67392 34 9 34ZM35 34C36.3261 34 37.5979 33.4732 38.5355 32.5355C39.4732 31.5979 40 30.3261 40 29C40 27.6739 39.4732 26.4021 38.5355 25.4645C37.5979 24.5268 36.3261 24 35 24C33.6739 24 32.4022 24.5268 31.4645 25.4645C30.5268 26.4021 30 27.6739 30 29C30 30.3261 30.5268 31.5979 31.4645 32.5355C32.4022 33.4732 33.6739 34 35 34Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">MOTO</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M24 3C24 2.20435 24.3161 1.44129 24.8787 0.87868C25.4413 0.316071 26.2044 0 27 0L45 0C45.7957 0 46.5587 0.316071 47.1213 0.87868C47.6839 1.44129 48 2.20435 48 3V45C48 45.7957 47.6839 46.5587 47.1213 47.1213C46.5587 47.6839 45.7957 48 45 48H27C26.2044 48 25.4413 47.6839 24.8787 47.1213C24.3161 46.5587 24 45.7957 24 45V3ZM27 43.5C27 43.8978 27.158 44.2794 27.4393 44.5607C27.7206 44.842 28.1022 45 28.5 45C28.8978 45 29.2794 44.842 29.5607 44.5607C29.842 44.2794 30 43.8978 30 43.5C30 43.1022 29.842 42.7206 29.5607 42.4393C29.2794 42.158 28.8978 42 28.5 42C28.1022 42 27.7206 42.158 27.4393 42.4393C27.158 42.7206 27 43.1022 27 43.5ZM33 43.5C33 43.8978 33.158 44.2794 33.4393 44.5607C33.7206 44.842 34.1022 45 34.5 45C34.8978 45 35.2794 44.842 35.5607 44.5607C35.842 44.2794 36 43.8978 36 43.5C36 43.1022 35.842 42.7206 35.5607 42.4393C35.2794 42.158 34.8978 42 34.5 42C34.1022 42 33.7206 42.158 33.4393 42.4393C33.158 42.7206 33 43.1022 33 43.5ZM28.5 3C28.1022 3 27.7206 3.15804 27.4393 3.43934C27.158 3.72064 27 4.10218 27 4.5C27 4.89782 27.158 5.27936 27.4393 5.56066C27.7206 5.84196 28.1022 6 28.5 6H43.5C43.8978 6 44.2794 5.84196 44.5607 5.56066C44.842 5.27936 45 4.89782 45 4.5C45 4.10218 44.842 3.72064 44.5607 3.43934C44.2794 3.15804 43.8978 3 43.5 3H28.5ZM27 10.5C27 10.8978 27.158 11.2794 27.4393 11.5607C27.7206 11.842 28.1022 12 28.5 12H43.5C43.8978 12 44.2794 11.842 44.5607 11.5607C44.842 11.2794 45 10.8978 45 10.5C45 10.1022 44.842 9.72064 44.5607 9.43934C44.2794 9.15804 43.8978 9 43.5 9H28.5C28.1022 9 27.7206 9.15804 27.4393 9.43934C27.158 9.72064 27 10.1022 27 10.5ZM4.5 6C3.30653 6 2.16193 6.47411 1.31802 7.31802C0.474106 8.16193 0 9.30653 0 10.5L0 31.5C0 32.6935 0.474106 33.8381 1.31802 34.682C2.16193 35.5259 3.30653 36 4.5 36H18V42H16.5C16.1022 42 15.7206 42.158 15.4393 42.4393C15.158 42.7206 15 43.1022 15 43.5C15 43.8978 15.158 44.2794 15.4393 44.5607C15.7206 44.842 16.1022 45 16.5 45H21V33H4.5C4.10218 33 3.72064 32.842 3.43934 32.5607C3.15804 32.2794 3 31.8978 3 31.5V10.5C3 10.1022 3.15804 9.72064 3.43934 9.43934C3.72064 9.15804 4.10218 9 4.5 9H21V6H4.5Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">TECNOLOGÍA</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="38" height="42" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M3.9 36L0.0999999 22.6C-9.68575e-08 22.2 0.0419998 21.7333 0.226 21.2C0.41 20.6667 0.801333 20.3 1.4 20.1L4 19.2V10C4 8.9 4.392 7.95867 5.176 7.176C5.96 6.39333 6.90133 6.00133 8 6H14V0H26V6H32C33.1 6 34.042 6.392 34.826 7.176C35.61 7.96 36.0013 8.90133 36 10V19.2L38.6 20.1C39.3 20.3667 39.7167 20.7587 39.85 21.276C39.9833 21.7933 40 22.2347 39.9 22.6L36.1 36C34.4333 36 32.9167 35.6087 31.55 34.826C30.1833 34.0433 29 33.1013 28 32C27 33.1 25.8167 34.042 24.45 34.826C23.0833 35.61 21.6 36.0013 20 36C18.4 35.9987 16.9167 35.6073 15.55 34.826C14.1833 34.0447 13 33.1027 12 32C11 33.1 9.81667 34.042 8.45 34.826C7.08333 35.61 5.56667 36.0013 3.9 36ZM0 44V40H4C5.4 40 6.78333 39.7833 8.15 39.35C9.51667 38.9167 10.8 38.2667 12 37.4C13.2 38.2667 14.4833 38.9 15.85 39.3C17.2167 39.7 18.6 39.9 20 39.9C21.4 39.9 22.7833 39.7 24.15 39.3C25.5167 38.9 26.8 38.2667 28 37.4C29.2 38.2667 30.4833 38.9167 31.85 39.35C33.2167 39.7833 34.6 40 36 40H40V44H36C34.6 44 33.2333 43.8333 31.9 43.5C30.5667 43.1667 29.2667 42.6667 28 42C26.7333 42.6667 25.4247 43.1667 24.074 43.5C22.7233 43.8333 21.3653 44 20 44C18.6347 44 17.2767 43.8333 15.926 43.5C14.5753 43.1667 13.2667 42.6667 12 42C10.7333 42.6667 9.43333 43.1667 8.1 43.5C6.76667 43.8333 5.4 44 4 44H0ZM8 17.9L20 14L32 17.9V10H8V17.9ZM20 32C21.5667 32 22.892 31.45 23.976 30.35C25.06 29.25 26.4013 27.7667 28 25.9C29.6 27.7 30.6833 28.9333 31.25 29.6C31.8167 30.2667 32.5 30.8333 33.3 31.3L35.5 23.3L20 18.2L4.4 23.3L6.7 31.2C7.5 30.7333 8.18333 30.2 8.75 29.6C9.31667 29 10.4 27.7667 12 25.9C13.6667 27.8 15.0253 29.292 16.076 30.376C17.1267 31.46 18.4347 32.0013 20 32Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">EMBARCACIONES</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <div class="service-card p-3 h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M46.5095 36.1565L47.8433 38.8436C48.2116 39.5857 47.9086 40.4857 47.1666 40.8541L41.0292 43.9372C39.5246 44.6841 37.6958 44.0491 36.9802 42.5257L31.0949 30H18C16.507 30 15.2413 28.9022 15.0301 27.4242C11.8531 5.18512 12.0356 6.56662 12 6C12 2.59143 14.8423 -0.153285 18.2861 0.00665244C21.4053 0.151496 23.9156 2.7165 23.9978 5.838C24.0792 8.92546 21.8273 11.5027 18.8783 11.9354L19.3162 15.0001H31.5C32.3285 15.0001 33 15.6716 33 16.5001V19.5001C33 20.3286 32.3285 21.0001 31.5 21.0001H20.1733L20.6019 24.0001H33C33.5696 24.0001 34.1274 24.1623 34.6082 24.4676C35.089 24.7729 35.473 25.2088 35.7152 25.7243L41.1072 37.2L44.4989 35.4798C45.2409 35.1114 46.1411 35.4144 46.5095 36.1565ZM29.1898 33H26.8924C26.1622 38.0816 21.7804 42 16.5 42C10.7103 42 6 37.2897 6 31.5C6 27.6089 8.12756 24.2054 11.2804 22.3916C10.9324 19.9574 10.6388 17.9047 10.3909 16.1729C4.30838 18.606 0 24.559 0 31.5C0 40.5982 7.40184 48 16.5 48C23.2378 48 29.0443 43.9399 31.6041 38.1382L29.1898 33Z" fill="currentColor"/>
+                            </svg>
+                            <span class="service-label mt-3">MOVILIDAD</span>
+                        </div>
                     </div>
                 </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </aside>
+        </section>
 
-<!-- NUESTROS SEGUROS -->
-
-<section class="py-5">
-    <div class="text-center">
-        <h1 class="tex">Nuestros Seguros</h1>
-        <p class="fs-4">Descubrí las coberturas y servicios que tenemos para vos</p>
-    </div>
-    <div class="d-flex justify-content-center py-4 flex-wrap">
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/auto.svg" alt="">
-            <span class="mt-3">AUTOS</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/casa.svg" alt="">
-            <span class="mt-3">HOGAR</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/corazon.svg" alt="">
-            <span class="mt-3">SALUD</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/vida.svg" alt="">
-            <span class="mt-3">VIDA</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="./public/icon/Vector.svg" alt="">
-            <span class="mt-3">ACCIDENTES PERSONALES</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/moto.svg" alt="">
-            <span class="mt-3">MOTO</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/tecnologia.svg" alt="">
-            <span class="mt-3">TECNOLOGIA</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/embarcaciones.svg" alt="">
-            <span class="mt-3">EMBARCACIONES</span>
-        </div>
-        <div class="flex-column p-5 mx-5 my-5 shadow-md d-flex justify-content-center align-items-center" style="height: 163px; width: 165px;box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);">
-            <img src="public/icon/movilidad.svg" alt="">
-            <span class="mt-3">MOVILIDAD</span>
-        </div>
-        </div>
-</section>
-
-<!-- CONTACTANOS -->
-
-<section class="d-flex align-items-center justify-content-center text-center mt-5 py-5 sc">
-    <div class="container">
-        <div class="row bg-white rounded-3 p-4">
-            <div class="col-md-8 d-flex flex-column justify-content-center text-start">
-                <h1 class="mb-3 h2c">¿Necesitas ayuda? Contáctanos</h1>
-                <p class="mb-4">Si tenés otras consultas, contactate con nosotros y un asesor responderá tus dudas.</p>
-                <button class="whatsapp-btn sc rounded-pill" style="width: 160px;">
-                    <a href="pages/Contactanos.html" class="text-decoration-none text-white"><span>Consúltanos</span></a>
-                </button>
-            </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img class="img-fluid" src="public/img/servicioalclientedigital.png" alt="Servicio al cliente digital" style="height: auto;">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- POR QUE ELEGIRNOS -->
-
-<section>
-    <div class="container mt-5">
-        <!-- Tarjeta 1 -->
-        <div class="custom-card d-flex">
-            <img src="public/icon/family-connection.svg" alt="Amplia red de Productores Asesores">
-            <div>
-                <h2>Amplia red de Productores Asesores</h2>
-                <p class="fs-5">Contamos con una gran red de productores que incluye agentes independientes, corredores corporativos, plataformas digitales y alianzas estratégicas. Esta red permite a la empresa ofrecer seguros personalizados y de fácil acceso.
-                    Tambien nos da la posibilidad de  ofrecer una buena cobertura, atención personalizada y soluciones innovadoras, garantizando una experiencia de cliente eficiente y adaptada a tus necesidades.</p>
-            </div>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="custom-card d-flex">
-            <img src="public/icon/contratacion simple.svg" alt="Icono de Contratación">
-            <div>
-                <h2>Contratación Simple</h2>
-                <p class="fs-5">Escudo Seguros ofrece un proceso de contratación simple para seguros básicos como automóvil, salud y vida. Los clientes pueden elegir el seguro deseado a través de web, obtener una cotización instantánea, completar un formulario sencillo y firmar el contrato electrónicamente.<br>
-                    <br>
-                    Este proceso es rápido, accesible, sin papeleo, con pagos flexibles y transparente, lo que permite a los clientes obtener cobertura en minutos de manera fácil y sin complicaciones.</p>
-            </div>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="custom-card d-flex">
-            <img src="public/icon/presenciaFederal.svg" alt="Icono de Presencia">
-            <div>
-                <h2 >Presencia Federal</h2>
-                <p class="fs-5">Ofrecemos productos y servicios adaptados a tus necesidades regionales, asegurando el cumplimiento de normativas en cuanto a solvencia, transparencia y protección al consumidor. <br>
-                    <br>
-                    Además, contamos con agentes y corredores autorizados a nivel nacional, nuestra plataforma digital nos permite gestionar tus pólizas y reclamaciones en cualquier parte del país, garantizando un servicio coherente y legalmente seguro.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHATSAPP -->
-
-<section>
-    <div class="container my-5">
-        <div class="whatsapp-card">
-            <!-- Información -->
-            <div class="whatsapp-info">
-                <h4>En WhatsApp estamos las 24h <img src="public/icon/ws contac.svg" alt="WhatsApp" style="width: 25px;"></h4>
-                <h5 >Charla con nuestro asistente virtual sobre:</h5>
-                <ul>
-                    <li>Contratar un seguro</li>
-                    <li>Consultar sobre pagos</li>
-                    <li>Consultar sobre un siniestro</li>
-                </ul>
-                <button class="whatsapp-btn">
-                    <a href="https://web.whatsapp.com/" class="text-decoration-none text-white"><span>Chatear</span></a>
-                </button>
-            </div>
-
-            <!-- Imagen -->
-            <div class="whatsapp-image">
-                <img class="img-fluid" style="height: auto;" src="public/img/whatsapp-2 1.png" alt="WhatsApp Chat">
-</section>
-
-</main>
-
-<!-- footer -->
-
-<footer class=" text-center py-5 mt-5" style="background-color: #FF4000;">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <img src="public/img/escudoblack.png" alt="escudonegro" class="mb-3">
-                <div class="d-flex justify-content-center gap-3">
-                    <img src="public/icon/x.svg" alt="x" class="cursor-pointer">
-                    <img src="public/icon/ig.svg" alt="Instagram" class="cursor-pointer">
-                    <img src="public/icon/fb.svg" alt="Facebook" class="cursor-pointer">
+        <!-- Contactanos -->
+        <section class="py-5 bg-escudo">
+            <div class="container">
+                <div class="card border-0 rounded-4 overflow-hidden shadow-sm">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-7 p-4 p-lg-5 text-start">
+                            <h2 class="mb-3 h2c fw-bold">¿Necesitas ayuda? Contáctanos</h2>
+                            <p class="mb-4 text-secondary">Si tenés otras consultas, contactate con nosotros y un asesor responderá tus dudas.</p>
+                            <a href="pages/Contactanos.html" class="btn btn-escudo rounded-pill px-4 py-2">Consúltanos</a>
+                        </div>
+                        <div class="col-md-5">
+                            <img class="img-fluid w-100 h-100 object-fit-cover" src="public/img/servicioalclientedigital.png" alt="Servicio al cliente digital">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <nav class="d-flex justify-content-around">
-                    <ul class="list-unstyled text-start">
-                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Politica de Privacidad</a></li>
-                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Datos Personales</a></li>
-                    </ul>
-                    <ul class="list-unstyled text-start">
-                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Canal de Denuncias</a></li>
-                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Defensa al Consumidor</a></li>
-                    </ul>
-                    <ul class="list-unstyled text-start">
-                        <li class="mb-3"><a href="" class="text-decoration-none text-white">Accesibilidad</a></li>
-                    </ul>
-                </nav>
+        </section>
+
+        <!-- Por qué Elegirnos -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center tex fw-bold display-6 mb-5">¿Por qué Elegirnos?</h2>
+
+                <!-- Tarjeta 1 -->
+                <div class="custom-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center text-md-start">
+                            <svg width="72" height="72" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white mb-3" aria-hidden="true">
+                                <path d="M55.1606 97.2109V93.4007C55.1606 92.6735 54.5696 92.0832 53.8419 92.0832H52.1526C51.4216 92.0832 50.8358 92.6735 50.8358 93.4007V97.2541L45.7306 84.7579C44.0882 84.7579 42.6173 85.7748 42.0372 87.3114L39.5321 93.9457L39.1182 95.0238C42.5651 98.3227 47.1815 100.408 52.274 100.589C52.5138 100.598 52.7546 100.603 52.9965 100.603C53.2791 100.603 53.5602 100.596 53.8401 100.584C58.8793 100.375 63.4452 98.3016 66.8638 95.0357L66.4453 93.9455L63.9033 87.2772C63.3252 85.7601 61.8703 84.7577 60.2468 84.7577L55.1606 97.2109Z" fill="currentColor"/>
+                                <path d="M82.0375 1.21007C69.7201 1.21007 59.6999 11.2307 59.6999 23.5467C59.6999 28.1458 61.0976 32.4242 63.4896 35.9807L52.9962 46.4737L42.5804 36.0571C45.3361 32.303 46.9666 27.6744 46.9666 22.6718C46.9671 10.1711 36.7928 0 24.2915 0C11.7905 0 1.62329 10.1711 1.62329 22.6718C1.62329 35.1729 11.7905 45.344 24.2915 45.344C29.1995 45.344 33.7482 43.7758 37.464 41.1149L49.3976 53.0497V55.286C37.0451 57.0402 27.5125 67.6851 27.5125 80.5153C27.5125 94.5671 38.9463 106 52.9962 106C67.0498 106 78.4818 94.5671 78.4818 80.5153C78.4818 67.684 68.9492 57.0386 56.5931 55.2856V53.0524L68.4125 41.2341C72.186 44.1474 76.9123 45.8834 82.0375 45.8834C94.3567 45.8834 104.377 35.863 104.377 23.5467C104.377 11.2307 94.3567 1.21007 82.0375 1.21007ZM24.2915 41.746C13.7763 41.746 5.21995 33.1895 5.21995 22.6718C5.21995 12.1545 13.776 3.59733 24.2915 3.59733C34.8103 3.59733 43.3697 12.1545 43.3697 22.6718C43.3697 33.1895 34.8103 41.746 24.2915 41.746ZM74.8852 80.5153C74.8852 92.584 65.0679 102.402 52.9965 102.402C40.9302 102.402 31.1111 92.584 31.1111 80.5153C31.1111 68.4468 40.9302 58.6282 52.9965 58.6282C65.0681 58.6282 74.8852 68.4468 74.8852 80.5153ZM82.0375 42.2856C71.7022 42.2856 63.297 33.8802 63.297 23.5467C63.297 13.2135 71.7025 4.80808 82.0375 4.80808C92.3676 4.80808 100.778 13.2135 100.778 23.5467C100.778 33.8802 92.3676 42.2856 82.0375 42.2856Z" fill="currentColor"/>
+                                <path d="M44.8164 72.2694C44.8164 75.9197 46.1465 79.1573 48.1885 81.1583C49.5389 82.4815 51.2001 83.265 52.9964 83.265C54.7918 83.265 56.4532 82.4815 57.804 81.1583C59.8465 79.1573 61.1779 75.9197 61.1779 72.2694C61.1779 66.2053 57.5065 61.2725 52.9964 61.2725C48.4845 61.2725 44.8164 66.2053 44.8164 72.2694ZM58.5961 72.2694C58.5961 76.83 56.0318 80.682 52.9964 80.682C49.9607 80.682 47.3983 76.83 47.3983 72.2694C47.3983 67.7088 49.9607 63.8545 52.9964 63.8545C56.0318 63.8543 58.5961 67.7088 58.5961 72.2694Z" fill="currentColor"/>
+                                <path d="M51.7386 90.3968H54.2439C54.6405 90.3968 55.0096 90.1932 55.2195 89.8572L55.7722 88.9752C56.1483 88.3802 56.169 87.6282 55.8278 87.0114C55.4864 86.3965 54.8368 86.0137 54.1349 86.0137H51.8442C51.1406 86.0137 50.4945 86.3963 50.1497 87.0114C49.8135 87.628 49.8342 88.3802 50.2067 88.9752L50.7614 89.8572C50.9726 90.1932 51.3382 90.3968 51.7386 90.3968Z" fill="currentColor"/>
+                                <path d="M15.8371 21.6209H20.3181C20.6454 21.979 20.9951 22.292 21.3645 22.5614V24.7656H20.3783L22.3966 29.7022C23.0754 31.3549 25.7726 31.3571 26.4514 29.7004L28.4661 24.7656H27.4835V22.5594C27.8587 22.2905 28.2026 21.979 28.5265 21.6209H33.0168C33.401 21.6209 33.7582 21.4034 33.9354 21.0585C34.1149 20.7137 34.08 20.2978 33.8548 19.9845C32.8231 18.5447 32.0263 16.6495 31.7984 15.0548C31.6759 14.1979 30.194 5.60059 24.4222 5.60059C19.1939 5.60059 17.0465 12.6408 17.0465 15.0863C17.0465 16.6928 16.0253 18.5537 14.9988 19.9843C14.7718 20.2976 14.7391 20.7133 14.9166 21.0583C15.0941 21.4034 15.451 21.6209 15.8371 21.6209ZM24.4445 12.2723C26.7754 12.2723 28.6382 13.5466 28.783 15.1442C28.697 18.6116 26.7464 21.5018 24.4224 21.5018C22.1295 21.5018 20.2012 18.6713 20.0747 15.2517C20.1368 13.6024 22.0545 12.2723 24.4445 12.2723Z" fill="currentColor"/>
+                                <path d="M35.346 32.8007L32.8238 26.2954C32.4885 25.4313 31.6563 24.8631 30.7294 24.8653L28.4257 30.5056C27.7543 32.1417 26.1879 33.1951 24.422 33.1951C22.6636 33.1951 21.09 32.1415 20.422 30.5069L18.1221 24.8635C17.0461 25.1559 16.1725 25.9412 15.7673 26.9799L13.4981 32.8005L12.9567 34.2083C12.6603 34.9875 12.9348 35.8668 13.6244 36.3359C16.7038 38.436 20.422 39.6717 24.422 39.6717C28.4257 39.6717 32.1401 38.4362 35.2233 36.3359C35.9097 35.8686 36.1912 34.9857 35.8876 34.2083L35.346 32.8007Z" fill="currentColor"/>
+                                <path d="M92.8333 33.5031L90.8636 28.3325C90.4031 27.1242 89.3083 26.2659 88.0244 26.1096C88.0244 26.1096 88.0241 26.1094 88.0237 26.1094C87.5109 29.0011 84.9959 31.2224 81.9573 31.2224C78.9172 31.2224 76.4022 29.0029 75.886 26.1094C74.6127 26.2724 73.5332 27.1208 73.0729 28.3194L71.082 33.5034L70.555 34.8796C70.2413 35.6899 70.5424 36.6039 71.2703 37.0786C74.3535 39.0814 78.0177 40.257 81.9578 40.257C85.8981 40.257 89.5626 39.0812 92.6437 37.0786C93.3716 36.6057 93.6691 35.6881 93.361 34.8796L92.8333 33.5031Z" fill="currentColor"/>
+                                <path d="M78.824 23.7634V26.0772H78.0747C78.5443 27.82 80.0663 29.1323 81.9574 29.1323C83.8472 29.1323 85.3708 27.8202 85.8385 26.0772H85.091V23.7634C87.1508 22.2567 88.5688 19.354 88.5688 15.9863C88.5688 11.0866 85.602 7.09875 81.9574 7.09875C78.3114 7.09875 75.3445 11.0866 75.3445 15.9863C75.3445 19.354 76.7627 22.2565 78.824 23.7634ZM81.9574 9.18671C84.4064 9.18671 86.4822 12.3003 86.4822 15.9861C86.4822 19.672 84.4066 22.7835 81.9574 22.7835C79.5071 22.7835 77.4347 19.6722 77.4347 15.9861C77.4347 12.3001 79.5071 9.18671 81.9574 9.18671Z" fill="currentColor"/>
+                            </svg>
+                            <h3 class="h4">Amplia red de Productores Asesores</h3>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="fs-5">Contamos con una gran red de productores que incluye agentes independientes, corredores corporativos, plataformas digitales y alianzas estratégicas. Esta red permite a la empresa ofrecer seguros personalizados y de fácil acceso. También nos da la posibilidad de ofrecer una buena cobertura, atención personalizada y soluciones innovadoras, garantizando una experiencia de cliente eficiente y adaptada a tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="custom-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center text-md-start">
+                            <svg width="72" height="72" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white mb-3" aria-hidden="true">
+                                <path d="M87.7538 6C86.7432 6 85.9238 6.81938 85.9238 7.82996V93.4945C85.9238 93.7784 85.99 94.0584 86.117 94.3128L91.0483 104.174C91.3582 104.794 91.9917 105.186 92.685 105.186C93.378 105.186 94.0115 104.794 94.3218 104.174L99.2527 94.3128C99.3797 94.0584 99.4459 93.7788 99.4459 93.4945V7.82996C99.4459 6.81938 98.6265 6 97.6159 6H87.7538ZM95.786 93.0618L92.685 99.2633L89.5838 93.0618V9.65993H95.786V93.0618Z" fill="currentColor"/>
+                                <path d="M101.34 19.0668V48.2601C101.34 49.2707 102.159 50.09 103.17 50.09C104.181 50.09 105 49.2707 105 48.2601V19.0668C105 18.0562 104.181 17.2368 103.17 17.2368C102.159 17.2368 101.34 18.0562 101.34 19.0668Z" fill="currentColor"/>
+                                <path d="M62.0272 57.8419H15.6972C14.6866 57.8419 13.8672 58.6616 13.8672 59.6722C13.8672 60.6828 14.6866 61.5018 15.6972 61.5018H62.0272C63.0378 61.5018 63.8572 60.6828 63.8572 59.6722C63.8572 58.6616 63.0378 57.8419 62.0272 57.8419Z" fill="currentColor"/>
+                                <path d="M62.0272 84.9199H15.6972C14.6866 84.9199 13.8672 85.7393 13.8672 86.7499C13.8672 87.7605 14.6866 88.5799 15.6972 88.5799H62.0272C63.0378 88.5799 63.8572 87.7605 63.8572 86.7499C63.8572 85.7393 63.0378 84.9199 62.0272 84.9199Z" fill="currentColor"/>
+                                <path d="M62.0272 46.0883H15.6972C14.6866 46.0883 13.8672 46.9076 13.8672 47.9182C13.8672 48.9288 14.6866 49.7482 15.6972 49.7482H62.0272C63.0378 49.7482 63.8572 48.9288 63.8572 47.9182C63.8572 46.9076 63.0378 46.0883 62.0272 46.0883Z" fill="currentColor"/>
+                                <path d="M15.6972 37.9956H43.2012C44.2117 37.9956 45.0311 37.1759 45.0311 36.1653C45.0311 35.1547 44.2117 34.3357 43.2012 34.3357H15.6972C14.6866 34.3357 13.8672 35.1547 13.8672 36.1653C13.8672 37.1759 14.6866 37.9956 15.6972 37.9956Z" fill="currentColor"/>
+                                <path d="M15.6972 26.2423H43.2012C44.2117 26.2423 45.0311 25.4233 45.0311 24.4127C45.0311 23.4021 44.2117 22.5824 43.2012 22.5824H15.6972C14.6866 22.5824 13.8672 23.4021 13.8672 24.4127C13.8672 25.4233 14.6866 26.2423 15.6972 26.2423Z" fill="currentColor"/>
+                                <path d="M1.82498 105.039H75.8995C76.9074 105.039 77.7244 104.222 77.7244 103.214V32.3039C77.7244 32.3012 77.7241 32.2989 77.7241 32.2966C77.7238 32.2377 77.7208 32.1792 77.7151 32.122C77.7108 32.0774 77.7032 32.0339 77.6955 31.9903C77.6929 31.9753 77.6915 31.96 77.6889 31.9451C77.6786 31.8939 77.6653 31.8427 77.6506 31.7924C77.6486 31.7858 77.6473 31.7791 77.6453 31.7722C77.6297 31.7223 77.6114 31.6727 77.5921 31.6238C77.5894 31.6175 77.5874 31.6109 77.5851 31.6046C77.5662 31.5587 77.5445 31.5144 77.5216 31.4709C77.5169 31.4619 77.5133 31.4519 77.5083 31.4429C77.487 31.4034 77.4631 31.3651 77.4391 31.3269C77.4311 31.3146 77.4242 31.3013 77.4162 31.2893C77.3932 31.2551 77.3676 31.2221 77.342 31.1892C77.3311 31.1749 77.3207 31.1596 77.3094 31.1453C77.2778 31.1071 77.2439 31.0705 77.2087 31.0346C77.202 31.0276 77.1967 31.0203 77.1897 31.0136L52.8565 6.68072C52.8143 6.63849 52.77 6.59891 52.7245 6.56134C52.7125 6.55169 52.6995 6.54305 52.6876 6.53374C52.6526 6.50647 52.6174 6.4792 52.5811 6.45493C52.5705 6.44794 52.5589 6.44162 52.5479 6.43464C52.5086 6.40937 52.4687 6.38476 52.4278 6.36248C52.4205 6.35849 52.4122 6.3555 52.4049 6.35151C52.3593 6.3279 52.3134 6.30528 52.2662 6.286C52.2609 6.28367 52.2556 6.282 52.2506 6.28001C52.2007 6.25972 52.1498 6.24143 52.0986 6.22547C52.0926 6.22381 52.087 6.22281 52.081 6.22115C52.0301 6.20585 51.9782 6.19255 51.9257 6.18191C51.9114 6.17925 51.8961 6.17792 51.8818 6.17526C51.8376 6.16761 51.7934 6.15963 51.7488 6.15531C51.6886 6.14899 51.6278 6.146 51.5666 6.146H1.82498C0.81705 6.14633 0 6.96338 0 7.97131V103.214C0 104.222 0.81705 105.039 1.82498 105.039ZM71.4943 30.4796L53.3929 30.4816L53.3919 12.3778L71.4943 30.4796ZM3.64995 9.79661H49.7416L49.7429 32.3069C49.7429 32.7911 49.9351 33.2553 50.2773 33.5975C50.6195 33.9393 51.084 34.1315 51.5679 34.1315L74.0748 34.1289V101.389H3.64995V9.79661Z" fill="currentColor"/>
+                            </svg>
+                            <h3 class="h4">Contratación Simple</h3>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="fs-5">Escudo Seguros ofrece un proceso de contratación simple para seguros básicos como automóvil, salud y vida. Los clientes pueden elegir el seguro deseado a través de la web, obtener una cotización instantánea, completar un formulario sencillo y firmar el contrato electrónicamente.</p>
+                            <p class="fs-5 mt-3">Este proceso es rápido, accesible, sin papeleo, con pagos flexibles y transparente, lo que permite a los clientes obtener cobertura en minutos de manera fácil y sin complicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="custom-card mb-0">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-4 text-center text-md-start">
+                            <svg width="76" height="76" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white mb-3" aria-hidden="true">
+                                <path d="M98.445 26.9417L87.7128 25.5764L88.7897 23.7896L92.258 17.839L82.8653 11.0865L79.0686 10.0614L72.1454 2.15334L62.6345 2.4294L58.444 1.11548L54.6734 5.54244L54.4766 9.43123L49.6815 15.6054L50.0624 19.9538L45.5825 29.5829L42.5615 43.2062L45.7927 50.9308L44.0064 62.8063L41.9569 64.4353L40.3413 84.0226L40.9453 88.2393L40.0518 92.6138L43.3233 102.309L40.7088 117.574L38.2131 121.003L42.2068 125.469L43.717 131.131L53.176 131.959L50.8114 126.336L55.0147 117.771L59.4947 113.567L54.6734 104.831L61.8197 97.7769L64.3555 89.8421L62.4242 87.6877L62.0824 83.3918L69.7808 83.7069L74.3918 75.1815L87.8701 72.4226L91.5882 67.1284L90.4717 61.0986L86.6353 57.197L89.7355 40.5259L98.8789 29.9772L106.131 26.3644L106.787 20.1969L103.133 20.1456L102.617 23.8732L98.445 26.9417ZM53.2937 132.47L53.1604 142.818L62.7973 143.885L63.2334 142.818L60.0635 141.84L55.3789 137.41L53.2937 132.47Z" fill="currentColor"/>
+                            </svg>
+                            <h3 class="h4">Presencia Federal</h3>
+                        </div>
+                        <div class="col-md-8">
+                            <p class="fs-5">Ofrecemos productos y servicios adaptados a tus necesidades regionales, asegurando el cumplimiento de normativas en cuanto a solvencia, transparencia y protección al consumidor.</p>
+                            <p class="fs-5 mt-3">Además, contamos con agentes y corredores autorizados a nivel nacional; nuestra plataforma digital nos permite gestionar tus pólizas y reclamaciones en cualquier parte del país, garantizando un servicio coherente y legalmente seguro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp -->
+        <section class="pb-5">
+            <div class="container my-4">
+                <div class="whatsapp-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-6 p-4 p-lg-5 whatsapp-info">
+                            <h4 class="d-flex align-items-center gap-2 mb-3">
+                                <span>En WhatsApp estamos las 24h</span>
+                                <svg width="26" height="26" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo flex-shrink-0" aria-hidden="true">
+                                    <path d="M46.1326 7.85712C43.6444 5.35722 40.6811 3.37505 37.4153 2.02612C34.1495 0.677192 30.6465 -0.0115105 27.1105 0.000145516C12.2944 0.000145516 0.219039 12.0151 0.219039 26.7571C0.219039 31.4821 1.46728 36.0721 3.80095 40.122L0.00195312 54L14.2482 50.274C18.1829 52.407 22.606 53.541 27.1105 53.541C41.9266 53.541 54.002 41.526 54.002 26.7841C54.002 19.6291 51.207 12.9061 46.1326 7.85712ZM27.1105 49.005C23.0944 49.005 19.1597 47.925 15.7135 45.9L14.8994 45.414L6.43311 47.628L8.68537 39.42L8.14266 38.583C5.91088 35.0381 4.72607 30.9401 4.72356 26.7571C4.72356 14.4991 14.7638 4.50913 27.0834 4.50913C33.0532 4.50913 38.6703 6.83113 42.8763 11.0431C44.9593 13.1055 46.61 15.559 47.7326 18.2611C48.8552 20.9632 49.4274 23.8602 49.416 26.7841C49.4703 39.042 39.4301 49.005 27.1105 49.005ZM39.3758 32.3731C38.6974 32.0491 35.3869 30.4291 34.7899 30.1861C34.1658 29.9701 33.7316 29.8621 33.2703 30.5101C32.809 31.1851 31.5336 32.6971 31.1537 33.1291C30.7738 33.5881 30.3668 33.6421 29.6884 33.2911C29.01 32.9671 26.8391 32.2381 24.2884 29.9701C22.2803 28.1881 20.9507 26.0011 20.5437 25.3261C20.1638 24.6511 20.4894 24.3001 20.8422 23.9491C21.1406 23.6521 21.5205 23.1661 21.8462 22.7881C22.1718 22.4101 22.3075 22.1131 22.5246 21.6811C22.7417 21.2221 22.6331 20.8441 22.4703 20.5201C22.3075 20.1961 20.9507 16.9021 20.408 15.5521C19.8653 14.2561 19.2954 14.4181 18.8884 14.3911H17.5859C17.1246 14.3911 16.419 14.5531 15.7949 15.2281C15.1979 15.9031 13.4612 17.5231 13.4612 20.8171C13.4612 24.1111 15.8763 27.2971 16.202 27.7291C16.5276 28.1881 20.9507 34.9381 27.6803 37.827C29.2813 38.529 30.5296 38.934 31.5065 39.231C33.1075 39.744 34.5728 39.663 35.7396 39.501C37.0422 39.312 39.7286 37.881 40.2713 36.3151C40.8411 34.7491 40.8411 33.4261 40.6512 33.1291C40.4613 32.8321 40.0542 32.6971 39.3758 32.3731Z" fill="currentColor"/>
+                                </svg>
+                            </h4>
+                            <h5 class="mb-3">Charlá con nuestro asistente virtual sobre:</h5>
+                            <ul>
+                                <li>Contratar un seguro</li>
+                                <li>Consultar sobre pagos</li>
+                                <li>Consultar sobre un siniestro</li>
+                            </ul>
+                            <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="btn btn-escudo rounded-pill px-4 py-2">Chatear</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid w-100 h-100 object-fit-cover" src="public/img/whatsapp-2 1.png" alt="Atención por WhatsApp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-escudo text-center py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-4">
+                    <img src="public/img/escudoblack.png" alt="Escudo Seguros" class="mb-3">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="X">
+                            <svg width="26" height="24" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M0 0.988281H4.16667L29.1667 34.1914H25L0 0.988281ZM7.5 0.988281H11.6667L36.6667 34.1914H32.5L7.5 0.988281Z" fill="currentColor"/>
+                                <path d="M3.3335 0.988281H11.6668V4.30859H3.3335V0.988281ZM25.0002 34.1914H33.3335V30.8711H25.0002V34.1914Z" fill="currentColor"/>
+                                <path d="M25.7115 0.988281H30.8335L5.95545 34.1914H0.833496L25.7115 0.988281Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Instagram">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M11.6 0H28.4C34.8 0 40 5.2 40 11.6V28.4C40 31.4765 38.7779 34.427 36.6024 36.6024C34.427 38.7779 31.4765 40 28.4 40H11.6C5.2 40 0 34.8 0 28.4V11.6C0 8.52349 1.22214 5.57298 3.39756 3.39756C5.57298 1.22214 8.52349 0 11.6 0ZM11.2 4C9.29044 4 7.45909 4.75857 6.10883 6.10883C4.75857 7.45909 4 9.29044 4 11.2V28.8C4 32.78 7.22 36 11.2 36H28.8C30.7096 36 32.5409 35.2414 33.8912 33.8912C35.2414 32.5409 36 30.7096 36 28.8V11.2C36 7.22 32.78 4 28.8 4H11.2ZM30.5 7C31.163 7 31.7989 7.26339 32.2678 7.73223C32.7366 8.20107 33 8.83696 33 9.5C33 10.163 32.7366 10.7989 32.2678 11.2678C31.7989 11.7366 31.163 12 30.5 12C29.837 12 29.2011 11.7366 28.7322 11.2678C28.2634 10.7989 28 10.163 28 9.5C28 8.83696 28.2634 8.20107 28.7322 7.73223C29.2011 7.26339 29.837 7 30.5 7ZM20 10C22.6522 10 25.1957 11.0536 27.0711 12.9289C28.9464 14.8043 30 17.3478 30 20C30 22.6522 28.9464 25.1957 27.0711 27.0711C25.1957 28.9464 22.6522 30 20 30C17.3478 30 14.8043 28.9464 12.9289 27.0711C11.0536 25.1957 10 22.6522 10 20C10 17.3478 11.0536 14.8043 12.9289 12.9289C14.8043 11.0536 17.3478 10 20 10ZM20 14C18.4087 14 16.8826 14.6321 15.7574 15.7574C14.6321 16.8826 14 18.4087 14 20C14 21.5913 14.6321 23.1174 15.7574 24.2426C16.8826 25.3679 18.4087 26 20 26C21.5913 26 23.1174 25.3679 24.2426 24.2426C25.3679 23.1174 26 21.5913 26 20C26 18.4087 25.3679 16.8826 24.2426 15.7574C23.1174 14.6321 21.5913 14 20 14Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Facebook">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M40 19.9718C40 8.94737 31.04 0 20 0C8.96 0 0 8.94737 0 19.9718C0 29.6382 6.88 37.6868 16 39.5442V25.9633H12V19.9718H16V14.9789C16 11.1243 19.14 7.98872 23 7.98872H28V13.9803H24C22.9 13.9803 22 14.879 22 15.9774V19.9718H28V25.9633H22V39.8438C32.1 38.8452 40 30.3372 40 19.9718Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <nav class="row text-start gy-2" aria-label="Enlaces legales">
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="pages/PreguntasFrecuentes.html">Política de Privacidad</a></li>
+                            <li class="mb-0"><a href="pages/PreguntasFrecuentes.html">Datos Personales</a></li>
+                        </ul>
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="pages/siniestros.html">Canal de Denuncias</a></li>
+                            <li class="mb-0"><a href="pages/Contactanos.html">Defensa al Consumidor</a></li>
+                        </ul>
+                        <ul class="col-12 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-0"><a href="pages/Contactanos.html">Accesibilidad</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <!-- bootstrap js  -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

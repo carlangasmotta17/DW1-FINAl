@@ -1,63 +1,57 @@
-/* Estilo nav */
-.nav {
-    background: #FF4000;
-    height: 140px ;
-}
-/* Estilos de página Cotizar */
-body {
-    font-family: Arial, sans-serif;
-}
-
-.fondo {
-    background: #E9E9E9;
+/* Estilos específicos de página Cotizar */
+body.fondo {
+    background-color: #E9E9E9;
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
 }
 
 .title {
-    color: #e86224;
-    font-weight: bold;
-    padding: 20px;
+    color: #FF4000;
+    font-weight: 700;
 }
 
 .subtitle {
-    color: #e86224;
-    margin-block-end: 60px;
-}
-
-#text3 {
-    padding-left: 20px;
-    font-weight: semiBold;
+    color: #F75E25;
 }
 
 .form-title {
-    color: #e86224;
+    color: #FF4000;
+    font-weight: 700;
 }
 
 .boton {
     background-color: #FF4000;
-    color: white;
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
-    width: 130px;
-    padding: 5px;
+    border-radius: 50rem;
+    min-width: 140px;
+    padding: 0.6rem 1.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
-.footer {
-    background-color: #f9f9f9;
-    margin-top: 30px;
+.boton:hover {
+    background-color: #E03800;
+    color: #ffffff;
+}
+
+/* Footer institucional blanco de Cotizar (según Figma) */
+.footer-cotizar {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .footer-brand {
-    color: #333;
-    font-size: 25px;
+    color: #333333;
+    font-size: 1.4rem;
 }
 
 .footer-brand .highlight {
-    color: #e86224;
+    color: #FF4000;
 }
 
 .footer-links {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.875rem;
+    color: #666666;
 }
 
 .footer-links a {
@@ -71,12 +65,11 @@ body {
 }
 
 .copyright {
-    font-size: 12px;
-    color: #999;
+    font-size: 0.75rem;
+    color: #888888;
 }
 
 .footer-img {
     height: 40px;
+    width: auto;
 }
-
-

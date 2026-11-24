@@ -3,128 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escudo Seguros</title>
-    <link rel="stylesheet" href="../scss/custom.css">
-    <link rel="stylesheet" href="../style/styleDeCotizar.css">
+    <title>Cotizar | Escudo Seguros</title>
     <link rel="shortcut icon" href="../public/icon/escudo.ico" type="image/x-icon">
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Font: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap compilado + Estilos propios -->
+    <link rel="stylesheet" href="../scss/custom.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style/styleDeCotizar.css">
 </head>
-<body class="fondo">
-    <!-- navbar -->
+<body class="fondo d-flex flex-column min-vh-100">
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF4000;">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-escudo">
+            <div class="container-fluid px-lg-4">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../public/img/escudo-blan.png" alt="escudo-blan" style="height: 80px;">
+                    <img src="../public/img/escudo-blan.png" alt="Escudo Seguros">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Cotizar.html ">Cotizar</a>
+                            <a class="nav-link active" aria-current="page" href="Cotizar.html">Cotizar</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
+                            <a class="nav-link dropdown-toggle" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
                             <ul class="dropdown-menu border-0 shadow-lg">
-                                <li><a class="dropdown-item py-2"  href="siniestros.html">Denunciar Siniestros</a></li>
+                                <li><a class="dropdown-item py-2" href="siniestros.html">Denunciar Siniestros</a></li>
                                 <li><a class="dropdown-item py-2" href="Edo.Siniestro.html">Estado del Siniestro</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item py-2" href="Aux24_7.html">Auxilio Mecánico 24/7</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Contactanos.html">Contactanos</a>
+                            <a class="nav-link" href="Contactanos.html">Contactanos</a>
                         </li>
                     </ul>
-                    <button class="btn btn-light d-flex align-items-center gap-2 px-3 py-2 rounded-pill" type="button">
-                        <img src="../public/icon/Per ingresar.svg" alt="Icono ingresar">
-                        <a href="ingresar.html" class="text-decoration-none text-black"><span>Ingresar</span></a>
-                    </button>
+                    <a href="ingresar.html" class="btn btn-light text-dark d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill fw-semibold">
+                        <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secondary" aria-hidden="true">
+                            <path d="M11.0449 0C12.4633 0 13.8237 0.526784 14.8267 1.46447C15.8297 2.40215 16.3932 3.67392 16.3932 5C16.3932 6.32608 15.8297 7.59785 14.8267 8.53553C13.8237 9.47322 12.4633 10 11.0449 10C9.62638 10 8.26601 9.47322 7.263 8.53553C6.25998 7.59785 5.6965 6.32608 5.6965 5C5.6965 3.67392 6.25998 2.40215 7.263 1.46447C8.26601 0.526784 9.62638 0 11.0449 0ZM11.0449 12.5C16.9548 12.5 21.7416 14.7375 21.7416 17.5V20H0.348145V17.5C0.348145 14.7375 5.13492 12.5 11.0449 12.5Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ingresar</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Cotizar Seguros -->
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="title mb-2">Cotizá tu seguro de Hogar con un 30% de descuento.</h1>
+                <p class="subtitle fs-5 mb-0">¡Aprovechá el Cyber Monday y contratá al mejor precio!</p>
+            </div>
 
-<!-- COTIZAR SEGUROS-->
-<main>
-    <div class="container py-5">
-        <div class="text-center">
-            <h1 class="title">Cotizá tu seguro de Hogar con un 30% de descuento.</h1>
-            <h5 class="subtitle">¡Aprovechá el Cyber Monday y contratá al mejor precio!</h5>
-            <p id= "text3" class="col-md-6">Para comenzar, vamos a pedirte algunos datos personales</p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="form-title">Iniciemos tu cotización</h3>
-                        <form action="#" method="POST">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <p class="fw-semibold mb-3">Para comenzar, vamos a pedirte algunos datos personales</p>
+                    <div class="card border-0 rounded-4 shadow-sm p-3 p-md-4">
+                        <div class="card-body">
+                            <h2 class="h4 form-title mb-4">Iniciemos tu cotización</h2>
+                            <form id="cotizarForm">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" name="apellido" placeholder="Apellido" aria-label="Apellido" required>
                                     </div>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" aria-label="Nombre" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" name="area" placeholder="Área" required>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" class="form-control" name="area" placeholder="Área" aria-label="Código de área" required>
                                     </div>
-                                    <div class="col-6">
-                                        <input type="text" class="form-control" name="telefono" placeholder="Número de Teléfono" required>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="tel" class="form-control" name="telefono" placeholder="Número de Teléfono" aria-label="Número de Teléfono" required>
                                     </div>
                                 </div>
+                                <div class="mb-4">
+                                    <input type="email" class="form-control" name="correo" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="boton">Comenzar</button>
+                                </div>
+                            </form>
+                            <div id="cotizarFeedback" class="alert alert-success mt-3 mb-0 d-none" role="alert">
+                                ¡Gracias! Recibimos tus datos. En instantes te contactaremos con tu cotización personalizada.
                             </div>
-                            <div class="mb-4">
-                                <input type="email" class="form-control" name="correo" placeholder="Correo Electrónico" required>
-                            </div>
-                            <div class="">
-                                <button class="boton">Comenzar</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer bg-white">
-        <div class="container py-3">
-            <div class="row align-items-center text-center text-md-start">
+    <!-- Footer institucional blanco (según Figma) -->
+    <footer class="footer-cotizar py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start gy-3">
                 <div class="col-md-6">
                     <p class="footer-brand mb-1">
                         <strong>GRUPO <span class="highlight">ESCUDO SEGUROS</span></strong>
                     </p>
-                    <p class="footer-links">
-                        Términos y condiciones / Políticas de Privacidad / Grupo Escudo Seguros
+                    <p class="footer-links mb-1">
+                        <a href="PreguntasFrecuentes.html">Términos y condiciones</a> /
+                        <a href="PreguntasFrecuentes.html">Políticas de Privacidad</a> /
+                        <span>Grupo Escudo Seguros</span>
                     </p>
                     <p class="copyright mb-0">
                         Todos los derechos reservados. Copyright
                     </p>
                 </div>
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                    <img src="../public/img/datafiscal1.png" alt="QR 1" class="footer-img me-2">
-                    <img src="../public/img/datafiscal2.png" alt="QR 2" class="footer-img me-2">
-                    <img src="../public/img/LogoSSN.png" alt="SSN Logo" class="footer-img">
+                <div class="col-md-6 text-md-end">
+                    <img src="../public/img/datafiscal1.png" alt="Data Fiscal" class="footer-img me-2">
+                    <img src="../public/img/datafiscal2.png" alt="AAIP Registro" class="footer-img me-2">
+                    <img src="../public/img/LogoSSN.png" alt="Superintendencia de Seguros de la Nación" class="footer-img">
                 </div>
             </div>
         </div>
     </footer>
-</main>
 
-    <!-- bootstrap js  -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("cotizarForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("cotizarFeedback").classList.remove("d-none");
+            this.reset();
+        });
+    </script>
 </body>
 </html>

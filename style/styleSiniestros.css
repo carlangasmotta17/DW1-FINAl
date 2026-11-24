@@ -1,102 +1,74 @@
-.nav {
-    background: #FF4000;
-    height: 140px ;
-}
-
-.lin{
-    color: white;
-}
-
-.tex{
-    color: #FF4000;
-}
-
-.h2c{
-    color: #F75E25;
-}
-
-.sc{
-    background-color: #FF4000;
-}
-
-
-
-
-
-
-
-
-/* Pagina de Siniestro */
-
-
-
-
-body{
-    font-family: "Manrope", sans-serif;
-}
-.fondo{
-    padding: 20px;
+/* Estilos específicos de Siniestros y Auxilio 24/7 */
+.fondo-siniestros {
+    padding: 1.5rem 2rem;
     background-color: #F6ECEC;
-    border-radius: 20px;
+    border-radius: 16px;
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
-.titulo-siniestros{
-    font-size: 30px;
+
+.titulo-siniestros {
+    font-size: 1.85rem;
+    font-weight: 700;
     color: #FF4000;
 }
 
-.text-siniestros{
-    font-size: 18px;
-
+.text-siniestros {
+    font-size: 1.05rem;
 }
 
-
-
-.card .card-body {
-    height: 350px;
-    padding: 20px 50px;
+/* Tarjetas de Siniestros */
+.siniestro-card {
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-body .icon{
-    max-width: 90px;
-    max-height: 90px;
+.siniestro-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-.card img{
-    max-width: 70px;
-    max-height: 70px;
-    align-items: end;
-}
-
-.card-body h5{
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.card-body p{
-    font-size: 16px;
-}
-
-
-
-.card-body .btn{
-    background-color: #FF4000;
-    color: #fff;
-}
-
-.card-body{
+.siniestro-card .card-body {
+    min-height: 310px;
+    padding: 2rem 2.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    align-items: center;
 }
 
+.siniestro-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
-.btn img{
-    width: 20px;
-    height: 20px;
+/* Tarjetas de Auxilio 24/7 */
+.aux-card {
+    background-color: #FFF5F0;
+    border: none;
+    border-bottom: 4px solid #FF4000 !important;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aux-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.aux-card .card-body {
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+    .aux-card .card-body {
+        min-height: 170px;
+    }
 }

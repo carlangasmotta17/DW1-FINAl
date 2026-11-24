@@ -1,123 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escudo Seguros</title>
-    <link rel="stylesheet" href="../scss/custom.css">
-    <link rel="stylesheet" href="../style/styleSiniestros.css">
-    <link rel="stylesheet" href="../style.css"> 
-    <!-- Favicon -->
+    <title>Siniestros | Escudo Seguros</title>
     <link rel="shortcut icon" href="../public/icon/escudo.ico" type="image/x-icon">
-    <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Google Font -->
+    <!-- Google Font: Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-
+    <!-- Bootstrap compilado + Estilos propios -->
+    <link rel="stylesheet" href="../scss/custom.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style/styleSiniestros.css">
 </head>
-
-<body>
-    <!-- navbar -->
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF4000;">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-escudo">
+            <div class="container-fluid px-lg-4">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../public/img/escudo-blan.png" alt="escudo-blan" style="height: 80px;">
+                    <img src="../public/img/escudo-blan.png" alt="Escudo Seguros">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir navegación">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Cotizar.html ">Cotizar</a>
+                            <a class="nav-link" href="Cotizar.html">Cotizar</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Siniestros</a>
+                            <a class="nav-link dropdown-toggle active" href="siniestros.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Siniestros</a>
                             <ul class="dropdown-menu border-0 shadow-lg">
-                                <li><a class="dropdown-item py-2"  href="siniestros.html">Denunciar Siniestros</a></li>
+                                <li><a class="dropdown-item py-2 active" href="siniestros.html">Denunciar Siniestros</a></li>
                                 <li><a class="dropdown-item py-2" href="Edo.Siniestro.html">Estado del Siniestro</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item py-2" href="Aux24_7.html">Auxilio Mecánico 24/7</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                            <a class="nav-link" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Contactanos.html">Contactanos</a>
+                            <a class="nav-link" href="Contactanos.html">Contactanos</a>
                         </li>
                     </ul>
-                    <button class="btn btn-light d-flex align-items-center gap-2 px-3 py-2 rounded-pill" type="button">
-                        <img src="../public/icon/Per ingresar.svg" alt="Icono ingresar">
-                        <a href="ingresar.html" class="text-decoration-none text-black"><span>Ingresar</span></a>
-                    </button>
+                    <a href="ingresar.html" class="btn btn-light text-dark d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill fw-semibold">
+                        <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-secondary" aria-hidden="true">
+                            <path d="M11.0449 0C12.4633 0 13.8237 0.526784 14.8267 1.46447C15.8297 2.40215 16.3932 3.67392 16.3932 5C16.3932 6.32608 15.8297 7.59785 14.8267 8.53553C13.8237 9.47322 12.4633 10 11.0449 10C9.62638 10 8.26601 9.47322 7.263 8.53553C6.25998 7.59785 5.6965 6.32608 5.6965 5C5.6965 3.67392 6.25998 2.40215 7.263 1.46447C8.26601 0.526784 9.62638 0 11.0449 0ZM11.0449 12.5C16.9548 12.5 21.7416 14.7375 21.7416 17.5V20H0.348145V17.5C0.348145 14.7375 5.13492 12.5 11.0449 12.5Z" fill="currentColor"/>
+                        </svg>
+                        <span>Ingresar</span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container py-5">
-
-        <div class="fondo row align-items-center mb-4">
-            <div class=" col-md-6 text-center">
-                <h2 class="titulo-siniestros">Siniestros de asegurados</h2>
+    <main class="container flex-grow-1 py-5">
+        <div class="fondo-siniestros row align-items-center gy-3 mb-5 mx-0">
+            <div class="col-md-6 text-center text-md-start">
+                <h1 class="titulo-siniestros mb-0">Siniestros de asegurados</h1>
             </div>
             <div class="col-md-6">
-                <p class="text-siniestros">
-                    <strong>Conoce la información necesaria para saber cómo proceder ante un siniestro o realizar su
-                        seguimiento.</strong>
-                    </p>
+                <p class="text-siniestros mb-0 fw-semibold">
+                    Conocé la información necesaria para saber cómo proceder ante un siniestro o realizar su seguimiento.
+                </p>
             </div>
         </div>
 
-        <div class=" row g-4 mt-4">
+        <div class="row g-4">
             <div class="col-md-6">
-                <div class="card shadow-sm text-center">
+                <div class="card siniestro-card text-center h-100">
                     <div class="card-body">
-                        <div class="icon mb-3">
-                            <img src="../public/icon/megaphonel.svg" alt="megafono">
+                        <div class="mb-3">
+                            <svg width="72" height="72" viewBox="0 0 132 131" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M101.42 75.2759L71.1752 22.9577C70.4184 21.6532 69.4101 20.5093 68.2078 19.5915C67.0055 18.6737 65.6329 17.9999 64.1682 17.6086C61.1881 16.8177 58.0143 17.2195 55.3297 18.7275L48.7517 22.5265C48.5835 22.5985 48.436 22.7111 48.3227 22.854L47.9432 23.3289C47.5451 23.7498 47.2662 24.2676 47.1347 24.8299C44.7892 31.9354 41.8683 38.8409 38.4007 45.4788C35.9638 49.5644 32.6745 53.0856 28.7537 55.806L18.8867 64.4738C16.8867 66.2448 15.5556 68.6403 15.1137 71.264C14.8327 73.0494 14.9434 74.8741 15.4382 76.6132C14.0852 77.3555 12.9082 78.3817 11.9897 79.6152C11.0593 80.824 10.3806 82.2045 9.99323 83.6762C9.70147 85.178 9.70147 86.7213 9.99323 88.223C10.4123 91.2413 12.0031 93.9776 14.4262 95.8483C15.6362 96.7653 17.0277 97.4312 18.5127 97.8024C19.4807 98.0608 20.4689 98.1845 21.4772 98.1736C22.0126 98.2281 22.5516 98.2281 23.0942 98.1736C24.5902 97.9934 26.0257 97.4804 27.2962 96.678C28.4842 98.0044 29.9857 99.0142 31.6632 99.6255C32.9667 100.133 34.3582 100.39 35.7607 100.368C36.5271 100.386 37.2824 100.297 38.0267 100.1L46.8102 115.673C47.859 117.417 49.3423 118.865 51.1174 119.876C52.8926 120.887 54.9 121.429 56.9467 121.448C59.5053 121.417 61.9841 120.56 64.0077 119.006C66.0313 117.451 67.4894 115.285 68.1612 112.835C68.9216 109.874 68.5165 106.737 67.0282 104.063L60.4502 92.7207C62.2249 92.3277 64.0216 92.113 65.8402 92.0766C73.5127 92.3987 81.1412 93.3648 88.6432 94.9695H90.5297L91.3932 94.5874L92.2017 94.1071L97.9712 90.7939C100.622 89.271 102.564 86.7711 103.361 83.84C103.861 80.8433 103.164 77.7715 101.42 75.2759ZM36.0302 92.5078C35.2631 92.7754 34.4269 92.7754 33.6597 92.5078C32.9011 92.24 32.2673 91.7061 31.8777 91.0068L23.6827 76.7769L23.1492 75.8654C22.7343 75.145 22.5827 74.3046 22.72 73.4861C22.8573 72.6676 23.2751 71.9213 23.9027 71.3732L29.9912 66.024L32.2572 69.9813L43.9557 90.3136L36.0302 92.5078ZM94.7372 81.8095C94.4725 82.7195 93.8767 83.4996 93.0652 83.9983L90.0457 85.7122L56.2977 27.3408L59.3722 25.5777C59.7657 25.3452 60.2036 25.1965 60.6581 25.1411C61.1126 25.0856 61.5737 25.1247 62.0122 25.2557C62.4614 25.3667 62.8836 25.5659 63.2539 25.8415C63.6242 26.1171 63.9351 26.4636 64.1682 26.8604L94.4127 79.1294C94.6816 79.576 94.8499 80.0752 94.9059 80.5925C94.9619 81.1098 94.9044 81.6329 94.7372 82.1261V81.8095ZM93.3347 50.0256C92.626 50.0376 91.927 49.8605 91.3108 49.513C90.6945 49.1654 90.1836 48.6601 89.8312 48.0497C89.3343 47.1432 89.2085 46.0815 89.4799 45.0853C89.7513 44.0891 90.3992 43.235 91.2887 42.7005L104.764 34.9388C105.674 34.4316 106.749 34.299 107.756 34.5695C108.764 34.84 109.625 35.4919 110.154 36.3852C110.651 37.2918 110.776 38.3535 110.505 39.3497C110.234 40.3459 109.586 41.2 108.696 41.7344L95.2212 49.4907C94.6495 49.8277 93.9995 50.012 93.3347 50.0256ZM118.184 68.966H102.608C102.077 68.966 101.551 68.8623 101.061 68.6606C100.57 68.459 100.125 68.1635 99.7492 67.791C99.3739 67.4184 99.0761 66.9762 98.8729 66.4894C98.6698 66.0027 98.5652 65.481 98.5652 64.9542C98.5652 64.4273 98.6698 63.9056 98.8729 63.4189C99.0761 62.9321 99.3739 62.4899 99.7492 62.1173C100.125 61.7448 100.57 61.4493 101.061 61.2477C101.551 61.046 102.077 60.9423 102.608 60.9423H118.184C119.256 60.9423 120.284 61.365 121.042 62.1173C121.8 62.8697 122.226 63.8901 122.226 64.9542C122.226 66.0182 121.8 67.0386 121.042 67.791C120.284 68.5434 119.256 68.966 118.184 68.966ZM80.6132 30.9269C79.911 30.9326 79.2206 30.7477 78.6167 30.392C77.7092 29.8743 77.0427 29.0237 76.7609 28.0233C76.479 27.0228 76.6043 25.9525 77.1097 25.0428L84.8702 11.5607C85.4286 10.6835 86.3073 10.0547 87.3223 9.80598C88.3373 9.55726 89.4099 9.70793 90.3155 10.2264C91.2211 10.7449 91.8894 11.591 92.1805 12.5876C92.4716 13.5841 92.3629 14.6538 91.8772 15.5726L84.1167 29.0001C83.7538 29.5975 83.2392 30.0899 82.6244 30.4281C82.0095 30.7662 81.316 30.9382 80.6132 30.9269Z" fill="currentColor"/>
+                            </svg>
                         </div>
-                        <h5 class="card-title">Cómo informar un siniestro</h5>
-                        <p class="card-text fs-5">
+                        <h2 class="card-title mb-2">Cómo informar un siniestro</h2>
+                        <p class="card-text fs-5 text-secondary">
                             Conocé cuáles son los plazos y medios disponibles para iniciar tu denuncia.
                         </p>
-
-                        <div class="boton">
-                            <a class="btn " href="ingresar.html" role="button">
-                                <img src="../public/icon/persona.svg" alt="">
-                                Ingresar
+                        <div class="mt-3">
+                            <a class="btn btn-escudo rounded-pill d-inline-flex align-items-center gap-2 px-4" href="ingresar.html" role="button">
+                                <svg width="18" height="16" viewBox="0 0 57 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white" aria-hidden="true">
+                                    <path d="M28.8247 8.12558C31.307 8.12558 33.6877 8.96517 35.443 10.4596C37.1982 11.9541 38.1843 13.9811 38.1843 16.0946C38.1843 18.2081 37.1982 20.235 35.443 21.7295C33.6877 23.224 31.307 24.0636 28.8247 24.0636C26.3424 24.0636 23.9617 23.224 22.2065 21.7295C20.4512 20.235 19.4651 18.2081 19.4651 16.0946C19.4651 13.9811 20.4512 11.9541 22.2065 10.4596C23.9617 8.96517 26.3424 8.12558 28.8247 8.12558ZM28.8247 28.0481C39.1671 28.0481 47.5439 31.6142 47.5439 36.0171V40.0016H10.1055V36.0171C10.1055 31.6142 18.4823 28.0481 28.8247 28.0481Z" fill="currentColor"/>
+                                </svg>
+                                <span>Ingresar</span>
                             </a>
-
                         </div>
-
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6">
-                <div class="card shadow-sm text-center">
+                <div class="card siniestro-card text-center h-100">
                     <div class="card-body">
-                        <div class="icon mb-3">
-                            <img src="../public/icon/note-line.svg" alt="nota">
+                        <div class="mb-3">
+                            <svg width="72" height="72" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-escudo" aria-hidden="true">
+                                <path d="M102.667 110H22.0003V29.3333H70.4737L77.807 22H22.0003C20.0554 22 18.1901 22.7726 16.8149 24.1479C15.4396 25.5231 14.667 27.3884 14.667 29.3333V110C14.667 111.945 15.4396 113.81 16.8149 115.185C18.1901 116.561 20.0554 117.333 22.0003 117.333H102.667C104.612 117.333 106.477 116.561 107.852 115.185C109.228 113.81 110 111.945 110 110V55L102.667 62.3333V110Z" fill="currentColor"/>
+                                <path d="M122.943 21.4133L110.586 9.05667C110.038 8.50678 109.386 8.07049 108.669 7.77281C107.952 7.47513 107.183 7.3219 106.406 7.3219C105.63 7.3219 104.861 7.47513 104.144 7.77281C103.426 8.07049 102.775 8.50678 102.226 9.05667L51.9563 59.62L47.8863 77.2567C47.713 78.1116 47.7312 78.9943 47.9397 79.8413C48.1483 80.6884 48.5419 81.4786 49.0924 82.1553C49.6429 82.832 50.3365 83.3783 51.1233 83.7549C51.9102 84.1315 52.7707 84.3291 53.643 84.3333C54.0939 84.3827 54.5488 84.3827 54.9997 84.3333L72.783 80.41L122.943 29.7733C123.493 29.2249 123.929 28.5735 124.227 27.8562C124.525 27.1389 124.678 26.3699 124.678 25.5933C124.678 24.8167 124.525 24.0478 124.227 23.3305C123.929 22.6132 123.493 21.9617 122.943 21.4133ZM68.9697 73.6267L55.5497 76.5967L58.6663 63.2867L96.5063 25.19L106.846 35.53L68.9697 73.6267ZM110.99 31.3867L100.65 21.0467L106.333 15.2533L116.746 25.6667L110.99 31.3867Z" fill="currentColor"/>
+                            </svg>
                         </div>
-                        <h5 class="card-title">Consulta el estado de tu denuncia</h5>
-                        <p class="card-text fs-5">
-                            Hace el seguimiento del siniestro a través de nuestros canales de
-                            Autogestión.
+                        <h2 class="card-title mb-2">Consultá el estado de tu denuncia</h2>
+                        <p class="card-text fs-5 text-secondary">
+                            Hacé el seguimiento del siniestro a través de nuestros canales de Autogestión.
                         </p>
-
-                        <div class="boton">
-                            <a class="btn " href="ingresar.html" role="button">
-                                <img src="../public/icon/persona.svg" alt="">
-                                Ingresar
+                        <div class="mt-3">
+                            <a class="btn btn-escudo rounded-pill d-inline-flex align-items-center gap-2 px-4" href="Edo.Siniestro.html" role="button">
+                                <svg width="18" height="16" viewBox="0 0 57 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white" aria-hidden="true">
+                                    <path d="M28.8247 8.12558C31.307 8.12558 33.6877 8.96517 35.443 10.4596C37.1982 11.9541 38.1843 13.9811 38.1843 16.0946C38.1843 18.2081 37.1982 20.235 35.443 21.7295C33.6877 23.224 31.307 24.0636 28.8247 24.0636C26.3424 24.0636 23.9617 23.224 22.2065 21.7295C20.4512 20.235 19.4651 18.2081 19.4651 16.0946C19.4651 13.9811 20.4512 11.9541 22.2065 10.4596C23.9617 8.96517 26.3424 8.12558 28.8247 8.12558ZM28.8247 28.0481C39.1671 28.0481 47.5439 31.6142 47.5439 36.0171V40.0016H10.1055V36.0171C10.1055 31.6142 18.4823 28.0481 28.8247 28.0481Z" fill="currentColor"/>
+                                </svg>
+                                <span>Ingresar</span>
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -125,43 +121,44 @@
         </div>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-    <footer class=" text-center py-5 mt-5" style="background-color: #FF4000;">
+    <!-- Footer -->
+    <footer class="footer-escudo text-center py-5 mt-auto">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-4">
                 <div class="col-md-4">
-                    <img src="../public/img/escudoblack.png" alt="" class="mb-3">
+                    <img src="../public/img/escudoblack.png" alt="Escudo Seguros" class="mb-3">
                     <div class="d-flex justify-content-center gap-3">
-                        <img src="../public/icon/x.svg" alt="" class="cursor-pointer">
-                        <img src="../public/icon/ig.svg" alt="" class="cursor-pointer">
-                        <img src="../public/icon/fb.svg" alt="" class="cursor-pointer">
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="X">
+                            <svg width="26" height="24" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M0 0.988281H4.16667L29.1667 34.1914H25L0 0.988281ZM7.5 0.988281H11.6667L36.6667 34.1914H32.5L7.5 0.988281Z" fill="currentColor"/>
+                                <path d="M3.3335 0.988281H11.6668V4.30859H3.3335V0.988281ZM25.0002 34.1914H33.3335V30.8711H25.0002V34.1914Z" fill="currentColor"/>
+                                <path d="M25.7115 0.988281H30.8335L5.95545 34.1914H0.833496L25.7115 0.988281Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Instagram">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M11.6 0H28.4C34.8 0 40 5.2 40 11.6V28.4C40 31.4765 38.7779 34.427 36.6024 36.6024C34.427 38.7779 31.4765 40 28.4 40H11.6C5.2 40 0 34.8 0 28.4V11.6C0 8.52349 1.22214 5.57298 3.39756 3.39756C5.57298 1.22214 8.52349 0 11.6 0ZM11.2 4C9.29044 4 7.45909 4.75857 6.10883 6.10883C4.75857 7.45909 4 9.29044 4 11.2V28.8C4 32.78 7.22 36 11.2 36H28.8C30.7096 36 32.5409 35.2414 33.8912 33.8912C35.2414 32.5409 36 30.7096 36 28.8V11.2C36 7.22 32.78 4 28.8 4H11.2ZM30.5 7C31.163 7 31.7989 7.26339 32.2678 7.73223C32.7366 8.20107 33 8.83696 33 9.5C33 10.163 32.7366 10.7989 32.2678 11.2678C31.7989 11.7366 31.163 12 30.5 12C29.837 12 29.2011 11.7366 28.7322 11.2678C28.2634 10.7989 28 10.163 28 9.5C28 8.83696 28.2634 8.20107 28.7322 7.73223C29.2011 7.26339 29.837 7 30.5 7ZM20 10C22.6522 10 25.1957 11.0536 27.0711 12.9289C28.9464 14.8043 30 17.3478 30 20C30 22.6522 28.9464 25.1957 27.0711 27.0711C25.1957 28.9464 22.6522 30 20 30C17.3478 30 14.8043 28.9464 12.9289 27.0711C11.0536 25.1957 10 22.6522 10 20C10 17.3478 11.0536 14.8043 12.9289 12.9289C14.8043 11.0536 17.3478 10 20 10ZM20 14C18.4087 14 16.8826 14.6321 15.7574 15.7574C14.6321 16.8826 14 18.4087 14 20C14 21.5913 14.6321 23.1174 15.7574 24.2426C16.8826 25.3679 18.4087 26 20 26C21.5913 26 23.1174 25.3679 24.2426 24.2426C25.3679 23.1174 26 21.5913 26 20C26 18.4087 25.3679 16.8826 24.2426 15.7574C23.1174 14.6321 21.5913 14 20 14Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white d-inline-flex align-items-center cursor-pointer" aria-label="Facebook">
+                            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M40 19.9718C40 8.94737 31.04 0 20 0C8.96 0 0 8.94737 0 19.9718C0 29.6382 6.88 37.6868 16 39.5442V25.9633H12V19.9718H16V14.9789C16 11.1243 19.14 7.98872 23 7.98872H28V13.9803H24C22.9 13.9803 22 14.879 22 15.9774V19.9718H28V25.9633H22V39.8438C32.1 38.8452 40 30.3372 40 19.9718Z" fill="currentColor"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <nav class="d-flex justify-content-around">
-                        <ul class="list-unstyled text-start">
-                            <li class="mb-3"><a href="" class="text-decoration-none text-white">Politica de
-                                    Privacidad</a></li>
-                            <li class="mb-3"><a href="" class="text-decoration-none text-white">Datos Personales</a>
-                            </li>
+                    <nav class="row text-start gy-2" aria-label="Enlaces legales">
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="PreguntasFrecuentes.html">Política de Privacidad</a></li>
+                            <li class="mb-0"><a href="PreguntasFrecuentes.html">Datos Personales</a></li>
                         </ul>
-                        <ul class="list-unstyled text-start">
-                            <li class="mb-3"><a href="" class="text-decoration-none text-white">Canal de Denuncias</a>
-                            </li>
-                            <li class="mb-3"><a href="" class="text-decoration-none text-white">Defensa al
-                                    Consumidor</a></li>
+                        <ul class="col-6 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-3"><a href="siniestros.html">Canal de Denuncias</a></li>
+                            <li class="mb-0"><a href="Contactanos.html">Defensa al Consumidor</a></li>
                         </ul>
-                        <ul class="list-unstyled text-start">
-                            <li class="mb-3"><a href="" class="text-decoration-none text-white">Accesibilidad</a></li>
+                        <ul class="col-12 col-sm-4 list-unstyled mb-0">
+                            <li class="mb-0"><a href="Contactanos.html">Accesibilidad</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -169,11 +166,7 @@
         </div>
     </footer>
 
-
-    <!-- bootstrap js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>

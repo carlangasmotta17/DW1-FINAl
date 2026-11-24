@@ -1,2 +1,5 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+$primary: #FF4000;
+$font-family-sans-serif: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 $enable-shadows: true;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
